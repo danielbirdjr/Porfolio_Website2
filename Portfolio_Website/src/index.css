@@ -94,6 +94,7 @@ html {
   line-height: 1rem;
   letter-spacing: .1rem;
   font-weight: 700;
+  color: var(--sec-text-color) /* unless it is on that section of the page */ ;
   /* position: relative; */
 }
 
@@ -121,11 +122,20 @@ html {
   margin-left: 0.25rem;
 }
 
+.left_container ul li a {
+  color: var(--sec-text-color); /* Default icon color */
+  display: flex;
+  align-items: center;
+}
+
+.left_container ul li a:hover {
+  color: var(--main-text-color);
+}
+
 .icon {
   height: 1.75rem;
   width: 1.75rem;
   fill: currentColor;
-  color: var(--sec-text-color);
 }
 
 .icon:hover {
@@ -225,4 +235,22 @@ html {
   line-height: 1.25;
   font-weight: 600;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow_icon {
+  color: var(--main-text-color);
+  height: .675rem;
+  width: .675rem;
+}
+
+.resume_container a:hover {
+  color: var(--main-accent-color);
+}
+
+.resume_container a:hover .arrow_icon {
+  color: var(--main-accent-color); 
+  stroke: var(--main-accent-color); 
 }

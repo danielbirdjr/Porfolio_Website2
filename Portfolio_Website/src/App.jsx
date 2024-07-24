@@ -145,7 +145,12 @@ function App() {
               </div>
             </div>
             <div className='resume_container'>
-              <a href="https://docs.google.com/document/d/1ChM2u16f4U3MLGuHp-Eb6d5ELqWw0IG0/edit" target='_blank'>View Full Resume</a>
+              <a href="https://docs.google.com/document/d/1ChM2u16f4U3MLGuHp-Eb6d5ELqWw0IG0/edit" target='_blank'>
+                View Full Résumé
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="arrow" className="arrow_icon">
+                  <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
+                </svg>
+              </a>
             </div>
           </div>
           <div id='projects' className='project_section'>
