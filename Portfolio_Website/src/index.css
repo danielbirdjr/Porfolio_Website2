@@ -117,7 +117,7 @@ html {
   list-style: none;
   display: flex;
   margin-top: 2rem;
-  gap: 1.25rem;
+  gap: 2rem;
   align-items: center;
   margin-left: 0.25rem;
 }
@@ -133,8 +133,8 @@ html {
 }
 
 .icon {
-  height: 1.75rem;
-  width: 1.75rem;
+  height: 2rem;
+  width: 2rem;
   fill: currentColor;
 }
 
@@ -237,13 +237,13 @@ html {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
 .arrow_icon {
   color: var(--main-text-color);
   height: .675rem;
   width: .675rem;
+  margin-left: 0.5rem;;
 }
 
 .resume_container a:hover {
@@ -253,4 +253,72 @@ html {
 .resume_container a:hover .arrow_icon {
   color: var(--main-accent-color); 
   stroke: var(--main-accent-color); 
+}
+
+/* Project Section */
+
+.project_container {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+.project_container .project_image_container {
+  grid-column: span 2;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--sec-text-color);
+}
+
+.project_container .project_info_container {
+  grid-column: span 6;
+}
+
+.project_container h3 {
+  line-height: 1.25;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.project_container p {
+  line-height: 1.5;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: var(--sec-text-color);
+}
+
+.project_container .languages_used {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.project_container .languages_used li {
+  margin-top: 0.5rem;
+  margin-right: 0.375rem;
+}
+
+.project_container .languages_used li .languages_used_container {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  padding: .25rem .75rem .25rem .75rem;
+  color: var(--main-accent-color);
+  background-color: var(--sec-accent-color);
+  border-radius: 9999px;
+  align-items: center;
+}
+
+.project_image_container img {
+  max-width: 100%;
+  height: auto;
+  color: transparent;
+  border-radius: .25rem;
+  border: 2px solid rgba(226, 232, 240, .1);
 }
