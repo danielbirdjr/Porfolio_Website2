@@ -80,22 +80,26 @@ function App() {
         </div>
         <div className='right_container'>
           <div id='about' className='about_container'>
-            <p>Lorem ipsum odor amet, consectetuer <b>adipiscing</b> elit. Nibh vehicula luctus eros, dignissim eu egestas fringilla morbi netus? Sagittis vestibulum faucibus eros et imperdiet vulputate elit. Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh vehicula luctus eros, dignissim eu egestas fringilla morbi netus?</p>
-            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Nibh vehicula luctus eros, dignissim eu egestas fringilla morbi netus? Sagittis vestibulum faucibus eros et imperdiet vulputate elit. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Egestas per condimentum ante egestas fermentum tincidunt. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+            <p>I'm Daniel Bird, a soon to be graduate with a Bachelor's degree in <b>Computer Science</b>. My passion lies in problem-solving and creating innovative solutions that make people's lives easier.</p>
+            <p>Throughout my internships, I have gained valuable experience in developing web applications and exploring the potential of <b>Artificial Intelligence</b> and machine learning. I am particularly excited about how these technologies can shape the future and improve everyday experiences.</p>
+            <p>When I'm not coding, I enjoy spending time working towards my <b>fitness goals</b> and with family and friends.</p>
           </div>
           <div id='experience' className='experience_section'>
             <div className='experice_container'>
-              <div className='timeline'>2024 — PRESENT</div>
+              <div className='timeline'>JULY 2024 — PRESENT</div>
               <div className='experience_details'>
                 <h3>Artificial Intelligence & Software Engineer @ Headstarter</h3>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor metus sodales class molestie dui faucibus. Nulla efficitur primis scelerisque; quam hendrerit eu imperdiet.</p>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor metus sodales class molestie dui faucibus. Nulla efficitur primis scelerisque; quam hendrerit eu imperdiet.</p>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor metus sodales class molestie dui faucibus. Nulla efficitur primis scelerisque; quam hendrerit eu imperdiet.</p> 
+                <p>Worked on a team of four tasked with developing an Artificial Intelligence project to achieve: getting 1000 people on our waitlist, creating 1000 accounts, or generating $1000 in revenue.</p>
+                <p>Engaged in brainstorming meetings to explore project ideas and conduct competitor research, shaping the direction of our project.</p>
+                <p>Responsible for fullstack development, integrating AI/ML components to enhance functionality and user experience.</p> 
+                <p>Specific contributions and project details to be determined as the project progresses.</p>
                 <ul className='languages_used'>
-                  <li><div className='languages_used_container'>Javascript</div></li>
+                  <li><div className='languages_used_container'>React</div></li>
+                  <li><div className='languages_used_container'>HTML</div></li>
+                  <li><div className='languages_used_container'>CSS</div></li>
+                  <li><div className='languages_used_container'>JavaScript</div></li>
                   <li><div className='languages_used_container'>Python</div></li>
-                  <li><div className='languages_used_container'>Java</div></li>
+                  <li><div className='languages_used_container'>SQL</div></li>
                 </ul>
               </div>
             </div>
@@ -156,31 +160,57 @@ function App() {
             </div>
           </div>
           <div id='projects' className='project_section'>
-            <div className='project_container'>
-              <div className='project_image_container'>
-                <img src={ProgressAIImage} alt="ProgressAI" />
+            <a href="https://training-app-project.vercel.app/" target='_blank'>
+              <div className='project_container'>
+                <div className='project_image_container'>
+                  <img src={ProgressAIImage} alt="ProgressAI" />
+                </div>
+                <div className='project_info_container'>
+                  <h3>
+                    ProgressAI
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="arrow" className="arrow_icon">
+                      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
+                    </svg>
+                  </h3>
+                  <p>Developed a fitness tracking app that leverages AI to provide personalized workout programs and continuous optimization based on user data such as workout intensity, training volume, sleep quality, nutrition, and stress.</p>
+                  <p>Created a sleek and minimalistic interface ensuring a seamless and intuitive user experience.</p>
+                  <p>Managed the full project lifecycle from concept to deployment, utilizing Vite for development efficiency and Firebase for authentication.</p>
+                  <ul className='languages_used'>
+                    <li><div className='languages_used_container'>React</div></li>
+                    <li><div className='languages_used_container'>JavaScript</div></li>
+                    <li><div className='languages_used_container'>HTML</div></li>
+                    <li><div className='languages_used_container'>CSS</div></li>
+                    <li><div className='languages_used_container'>Firebase</div></li>
+                    <li><div className='languages_used_container'>SQL</div></li>
+                    <li><div className='languages_used_container'>Vite</div></li>
+                  </ul>
+                </div>
               </div>
-              <div className='project_info_container'>
-                <h3>
-                  ProgressAI
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="arrow" className="arrow_icon">
-                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
-                  </svg>
-                </h3>
-                <p>Developed a fitness tracking app that leverages AI to provide personalized workout programs and continuous optimization based on user data such as workout intensity, training volume, sleep quality, nutrition, and stress.</p>
-                <p>Created a sleek and minimalistic interface ensuring a seamless and intuitive user experience.</p>
-                <p>Managed the full project lifecycle from concept to deployment, utilizing Vite for development efficiency and Firebase for authentication.</p>
-                <ul className='languages_used'>
-                  <li><div className='languages_used_container'>React</div></li>
-                  <li><div className='languages_used_container'>JavaScript</div></li>
-                  <li><div className='languages_used_container'>HTML</div></li>
-                  <li><div className='languages_used_container'>CSS</div></li>
-                  <li><div className='languages_used_container'>Firebase</div></li>
-                  <li><div className='languages_used_container'>SQL</div></li>
-                  <li><div className='languages_used_container'>Vite</div></li>
-                </ul>
+            </a>
+            <a href="/">
+              <div className='project_container'>
+                <div className='project_image_container'>
+                  <img src={ProgressAIImage} alt="ProgressAI" />
+                </div>
+                <div className='project_info_container'>
+                  <h3>
+                    Project #2
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="arrow" className="arrow_icon">
+                      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
+                    </svg>
+                  </h3>
+                  <p>Lorem ipsum odor amet, consectetue adipiscing elit. Lorem ipsum odor amet, consectetue adipiscing elit.</p>
+                  <p>Lorem ipsum odor amet, consectetue adipiscing elit.</p>
+                  <ul className='languages_used'>
+                    <li><div className='languages_used_container'>Language</div></li>
+                    <li><div className='languages_used_container'>Language</div></li>
+                    <li><div className='languages_used_container'>Language</div></li>
+                    <li><div className='languages_used_container'>Language</div></li>
+                    <li><div className='languages_used_container'>Language</div></li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

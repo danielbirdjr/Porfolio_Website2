@@ -256,6 +256,9 @@ html {
 }
 
 /* Project Section */
+.project_section a {
+  text-decoration: none;
+}
 
 .project_container {
   display: grid;
