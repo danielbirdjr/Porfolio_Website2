@@ -346,6 +346,11 @@ html {
     width: 100%;
   }
 
+  /* Be careful on with this */
+  .left_container_text {
+    max-height: 10rem;
+  }
+
   .right_container {
     width: 100%;
   }
@@ -375,3 +380,4 @@ html {
     line-height: 1.25rem;
   }
 }
+

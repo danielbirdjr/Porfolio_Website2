@@ -8,7 +8,7 @@ function App() {
     <>
       <div className='entire_container'>
         <div className='left_container'>
-          <div>
+          <div className='left_container_text'>
             <h1><a href="/">Daniel Bird</a></h1>
             <h2>Fullstack Software Engineer</h2>
             <p>I create seamless, robust, and innovative web solutions from front to back.</p>
