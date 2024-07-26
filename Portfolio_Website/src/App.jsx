@@ -1,5 +1,6 @@
 import './App.css'
-import ProgressAIImage from './assets/ProgressAI.png';
+import ProgressAIImage from './assets/ProgressAI2.png';
+import ComingSoonImage from './assets/coming_soon.jpg';
 
 
 function App() {
@@ -133,7 +134,7 @@ function App() {
             <a href="https://training-app-project.vercel.app/" target='_blank'>
               <div className='project_container'>
                 <div className='project_image_container'>
-                  <img src={ProgressAIImage} alt="ProgressAI" />
+                  <img src={ProgressAIImage} alt="ProgressAI Daniel Bird" />
                 </div>
                 <div className='project_info_container'>
                   <h3>
@@ -157,26 +158,29 @@ function App() {
                 </div>
               </div>
             </a>
-            <a href="/">
+            <a href="#projects">
               <div className='project_container'>
                 <div className='project_image_container'>
-                  <img src={ProgressAIImage} alt="ProgressAI" />
+                  <img src={ComingSoonImage} alt="Coming Soon Daniel Bird" />
                 </div>
                 <div className='project_info_container'>
                   <h3>
-                    Project #2
+                    Headstarter AI Project
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="arrow" className="arrow_icon">
                       <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
                     </svg>
                   </h3>
-                  <p>Lorem ipsum odor amet, consectetue adipiscing elit. Lorem ipsum odor amet, consectetue adipiscing elit.</p>
-                  <p>Lorem ipsum odor amet, consectetue adipiscing elit.</p>
+                  <p>Artificial Intelligence project made during the Headstarter Internship to get 1000 people on our waitlist and generate $1000 in revenue.</p>
                   <ul className='languages_used'>
-                    <li><div className='languages_used_container'>Language</div></li>
-                    <li><div className='languages_used_container'>Language</div></li>
-                    <li><div className='languages_used_container'>Language</div></li>
-                    <li><div className='languages_used_container'>Language</div></li>
-                    <li><div className='languages_used_container'>Language</div></li>
+                    <li><div className='languages_used_container'>React</div></li>
+                    <li><div className='languages_used_container'>JavaScript</div></li>
+                    <li><div className='languages_used_container'>Python</div></li>
+                    <li><div className='languages_used_container'>HTML</div></li>
+                    <li><div className='languages_used_container'>CSS</div></li>
+                    <li><div className='languages_used_container'>SQL</div></li>
+                    <li><div className='languages_used_container'>LLM's</div></li>
+                    <li><div className='languages_used_container'>AI</div></li>
+                    <li><div className='languages_used_container'>ML</div></li>
                   </ul>
                 </div>
               </div>
