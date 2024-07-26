@@ -386,3 +386,47 @@ html {
     padding: 3rem 1.5rem 3rem 1.5rem;
   }
 }
+
+@media (max-width: 640px) {
+  .left_container h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  /* Be careful on with this */
+  .left_container_text {
+    max-height: 8.75rem;
+  }
+
+  .experice_container {
+    display: block;
+  }
+
+  .experice_container .timeline {
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project_container {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .project_container .project_image_container {
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project_container img {
+    height: 8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .project_container img {
+    width: 100%;
+    height: auto;
+  }
+}
