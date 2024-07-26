@@ -348,7 +348,7 @@ html {
 
   /* Be careful on with this */
   .left_container_text {
-    max-height: 10rem;
+    max-height: 9.5rem;
   }
 
   .right_container {
@@ -381,3 +381,8 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  .entire_container {
+    padding: 3rem 1.5rem 3rem 1.5rem;
+  }
+}
