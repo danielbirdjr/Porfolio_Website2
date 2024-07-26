@@ -1,41 +1,8 @@
 import './App.css'
-import { useEffect } from 'react';
 import ProgressAIImage from './assets/ProgressAI.png';
 
 
 function App() {
-
-  // useEffect(() => {
-  //   const sections = document.querySelectorAll('section');
-  //   const navLinks = document.querySelectorAll('.nav_bar a');
-
-  //   const options = {
-  //     threshold: 0.5, // Trigger when 50% of the section is visible
-  //   };
-
-  //   const observer = new IntersectionObserver((entries, observer) => {
-  //     entries.forEach(entry => {
-  //       const id = entry.target.id;
-  //       const navLink = document.querySelector(`.nav_bar a[href="#${id}"]`);
-        
-  //       if (entry.isIntersecting) {
-  //         navLinks.forEach(link => link.classList.remove('active'));
-  //         navLink.classList.add('active');
-  //       }
-  //     });
-  //   }, options);
-
-  //   sections.forEach(section => {
-  //     observer.observe(section);
-  //   });
-
-  //   return () => {
-  //     sections.forEach(section => {
-  //       observer.unobserve(section);
-  //     });
-  //   };
-  // }, []);
-
 
   return (
     <>
