@@ -46,12 +46,14 @@ function App() {
           </div>
         </div>
         <div className='right_container'>
-          <div id='about' className='about_container'>
+          <div id='about' className='about_container section'>
+            <h2 className='section_header'>About</h2>
             <p>I'm Daniel Bird, a soon to be graduate with a Bachelor's degree in <b>Computer Science</b>. My passion lies in problem-solving and creating innovative solutions that make people's lives easier.</p>
             <p>Throughout my internships, I have gained valuable experience in developing web applications and exploring the potential of <b>Artificial Intelligence</b> and machine learning. I am particularly excited about how these technologies can shape the future and improve everyday experiences.</p>
             <p>When I'm not coding, I enjoy spending time working towards my <b>fitness goals</b> and with family and friends.</p>
           </div>
-          <div id='experience' className='experience_section'>
+          <div id='experience' className='experience_section section'>
+            <h2 className='section_header'>Experience</h2>
             <div className='experice_container'>
               <div className='timeline'>JULY 2024 — PRESENT</div>
               <div className='experience_details'>
@@ -126,7 +128,8 @@ function App() {
               </a>
             </div>
           </div>
-          <div id='projects' className='project_section'>
+          <div id='projects' className='project_section section'>
+            <h2 className='section_header'>Projects</h2>
             <a href="https://training-app-project.vercel.app/" target='_blank'>
               <div className='project_container'>
                 <div className='project_image_container'>

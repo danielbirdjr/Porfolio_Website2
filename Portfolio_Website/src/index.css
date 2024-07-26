@@ -5,6 +5,8 @@
   --background-color: #121212;
   --main-accent-color: #8feeff;
   --sec-accent-color: #21383c;
+  --background-color-transparent: rgba(18, 18, 18, 0.8); /* Transparent background color */
+
 }
 
 * {
@@ -141,8 +143,6 @@ html {
 .icon:hover {
   color: var(--main-text-color);
 }
-
-/* Right Container */
 
 /* About Section */
 .about_container {
@@ -324,4 +324,54 @@ html {
   color: transparent;
   border-radius: .25rem;
   border: 2px solid rgba(226, 232, 240, .1);
+}
+
+/* Right Container */
+.section_header {
+  display: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .entire_container {
+    flex-direction: column;
+    padding: 5rem 3rem 5rem 3rem;
+    gap: 0;
+  }
+
+  .left_container {
+    position: static;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .right_container {
+    width: 100%;
+  }
+
+  .nav_bar a {
+    display: none;
+  }
+
+  .section_header {
+    display: block; /* Ensure section headers are visible */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    z-index: 10; /* Ensure it stays on top */
+    margin-bottom: 1rem;
+    background-color: var(--background-color-transparent);
+    backdrop-filter: blur(10px);
+  }
+
+  .section h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1.25rem;
+  }
 }
