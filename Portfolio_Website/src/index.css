@@ -13,12 +13,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--background-color);
   color: var(--main-text-color);
 }
 
 html {
   scroll-padding-top: 6rem; /* Adjust this value as needed */
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 .entire_container {
@@ -456,4 +459,10 @@ html {
     width: 100%;
     height: auto;
   }
+}
+
+/* Styling for Experience Section Hover Effect */
+.experice_container:hover {
+  border-radius: .375rem;
+  /* background-color: yellow; */
 }
