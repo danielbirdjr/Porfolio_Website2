@@ -159,6 +159,10 @@ html {
   color: var(--main-text-color);
 }
 
+.about_container p b:hover {
+  color: var(--main-accent-color);
+}
+
 /* Experience Section */
 .experience_section {
   margin-bottom: 9rem;
@@ -171,6 +175,10 @@ html {
   margin-bottom: 1rem;
   cursor: pointer;
   margin-bottom: 3rem;
+}
+
+.experice_container:hover h3 {
+  color: var(--main-accent-color);
 }
 
 .experice_container .timeline {
@@ -244,11 +252,12 @@ html {
 
 .resume_container a:hover {
   color: var(--main-accent-color);
+  text-decoration: underline;
 }
 
 .resume_container a:hover .arrow_icon {
   color: var(--main-accent-color); 
-  stroke: var(--main-accent-color); 
+  stroke: var(--main-accent-color);
 }
 
 /* Project Section */
@@ -263,6 +272,15 @@ html {
   margin-bottom: 1rem;
   cursor: pointer;
   margin-bottom: 3rem;
+}
+
+.project_container:hover h3, 
+.project_container:hover path {
+  color: var(--main-accent-color);
+}
+
+.project_container:hover img {
+  border: 2px solid rgba(226, 232, 240, 0.5);
 }
 
 .project_container .project_image_container {
