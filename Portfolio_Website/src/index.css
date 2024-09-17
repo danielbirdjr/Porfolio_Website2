@@ -135,13 +135,13 @@ body {
 /* About Section */
 .about_container {
   margin-bottom: 8rem;
-  padding-left: 1rem;
 }
 .about_container p {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: var(--sec-text-color);
   line-height: 1.675;
+  padding-left: 1rem;
 }
 
 .about_container p b {
@@ -383,6 +383,10 @@ body {
     font-size: .875rem;
     line-height: 1.25rem;
   }
+
+  .experice_container:hover, .project_container:hover {
+    background-color: transparent !important; 
+  }
 }
 
 @media (max-width: 768px) {
@@ -449,12 +453,12 @@ body {
 }
 
 /* Styling for Experience Section Hover Effect */
-.experice_container:hover {
+.experice_container:hover { /* get rid of this on mobile view */
   border-radius: .375rem;
   background-color: rgba(255, 255, 255, 0.03);
 }
 
-.project_container:hover {
+.project_container:hover { /* get rid of this on mobile view */
   border-radius: .375rem;
   background-color: rgba(255, 255, 255, 0.03);
 }
