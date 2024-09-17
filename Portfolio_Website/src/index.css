@@ -27,7 +27,7 @@ body {
 .entire_container {
   display: flex;
   padding-left: 6rem;
-  padding-right: 6rem;
+  padding-right: 5.5rem;
   gap: 1rem;
   max-width: 1280px; 
   min-height: 100vh; 
@@ -39,7 +39,7 @@ body {
 .left_container {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  width: 50%;
+  width: 47%;
   max-height: 100vh;
   position: sticky;
   top: 0;
@@ -51,7 +51,7 @@ body {
 .right_container {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  width: 50%;
+  width: 53%;
   /* overflow-y: auto; */
 }
 
@@ -103,21 +103,6 @@ body {
   /* position: relative; */
 }
 
-/* .left_container .nav_bar a span {
-  position: absolute;
-  left: -20px;
-  height: 2px;
-  width: 0;
-  background-color: var(--almost-black); /* color 1 */
-  /* transition: width 0.3s;
-} */
-
-/* .left_container .nav_bar a.active span {
-  width: 20px;
-} */
-
-/* when selected, color 1; else color 2 */
-
 .left_container ul {
   list-style: none;
   display: flex;
@@ -149,7 +134,8 @@ body {
 
 /* About Section */
 .about_container {
-  margin-bottom: 9rem;
+  margin-bottom: 8rem;
+  padding-left: 1rem;
 }
 .about_container p {
   margin-bottom: 1rem;
@@ -168,16 +154,16 @@ body {
 
 /* Experience Section */
 .experience_section {
-  margin-bottom: 9rem;
+  margin-bottom: 8rem;
 }
 
 .experice_container {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 1rem;
-  margin-bottom: 1rem;
   cursor: pointer;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 .experice_container:hover h3 {
@@ -274,7 +260,8 @@ body {
   gap: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .project_container:hover h3, 
@@ -464,5 +451,10 @@ body {
 /* Styling for Experience Section Hover Effect */
 .experice_container:hover {
   border-radius: .375rem;
-  /* background-color: yellow; */
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.project_container:hover {
+  border-radius: .375rem;
+  background-color: rgba(255, 255, 255, 0.03);
 }

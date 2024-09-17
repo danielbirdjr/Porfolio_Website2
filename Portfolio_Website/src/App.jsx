@@ -56,11 +56,10 @@ function App() {
           <div id='experience' className='experience_section section'>
             <h2 className='section_header'>Experience</h2>
             <div className='experice_container'>
-              <div className='timeline'>JULY 2024 — PRESENT</div>
+              <div className='timeline'>JULY — AUG 2024</div>
               <div className='experience_details'>
                 <h3>Artificial Intelligence & Software Engineer @ Headstarter</h3>
                 <p>Worked on a team of four tasked with developing an Artificial Intelligence project to achieve: getting 1000 people on our waitlist, creating 1000 accounts, or generating $1000 in revenue.</p>
-                <p>Engaged in brainstorming meetings to explore project ideas and conduct competitor research, shaping the direction of our project.</p>
                 <p>Responsible for fullstack development, integrating AI/ML components to enhance functionality and user experience.</p> 
                 <p>Specific contributions and project details to be determined as the project progresses.</p>
                 <ul className='languages_used'>
@@ -74,7 +73,7 @@ function App() {
               </div>
             </div>
             <div className='experice_container'>
-              <div className='timeline'>JUNE 2024 — PRESENT</div>
+              <div className='timeline'>JUNE — AUG 2024</div>
               <div className='experience_details'>
                 <h3>Software Engineer Mentor @ BCAMP</h3>
                 <p>Conceptualized and led development of TicketChain, a decentralized ticketing platform on Mode Network blockchain, addressing industry issues.</p>
@@ -144,7 +143,6 @@ function App() {
                     </svg>
                   </h3>
                   <p>Developed a fitness tracking app that will leverage AI to provide personalized workout programs and continuous optimization based on user data such as workout intensity, training volume, sleep quality, nutrition, and stress.</p>
-                  <p>Created a sleek and minimalistic interface ensuring a seamless and intuitive user experience.</p>
                   <p>Managed the full project lifecycle from concept to deployment, utilizing Node.js for development efficiency and Firebase for authentication.</p>
                   <ul className='languages_used'>
                     <li><div className='languages_used_container'>React</div></li>
