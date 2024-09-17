@@ -19,7 +19,7 @@ function App() {
               <a href="#projects"><span></span>⎯⎯⎯ Projects</a>
             </div>
           </div>
-          <div className='platform_icon_container'>
+          <div className='platforms_icon_container'>
             <ul>
               <li>
                 <a href="https://github.com/danielbirdjr" target='_blank' rel="noopener noreferrer">
@@ -49,7 +49,7 @@ function App() {
         <div className='right_container'>
           <div id='about' className='about_container section'>
             <h2 className='section_header'>About</h2>
-            <p>I'm Daniel Bird, a soon to be graduate with a Bachelor's degree in <b>Computer Science</b>. My passion lies in problem-solving and creating innovative solutions that make people's lives easier.</p>
+            <p>I'm Daniel Bird, a recent graduate with a Bachelor's degree in <b>Computer Science</b>. My passion lies in problem-solving and creating innovative solutions that make people's lives easier.</p>
             <p>Throughout my internships, I have gained valuable experience in developing web applications and exploring the potential of <b>Artificial Intelligence</b> and machine learning. I am particularly excited about how these technologies can shape the future and improve everyday experiences.</p>
             <p>When I'm not coding, I enjoy spending time working towards my <b>fitness goals</b> and with family and friends.</p>
           </div>

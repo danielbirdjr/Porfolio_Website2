@@ -99,9 +99,17 @@ body {
   line-height: 1rem;
   letter-spacing: .1rem;
   font-weight: 700;
-  color: var(--sec-text-color) /* unless it is on that section of the page */ ;
-  /* position: relative; */
+  color: var(--sec-text-color) 
 }
+
+.left_container .nav_bar a:hover {
+  color: var(--main-text-color);
+}
+
+/* Nav Bar section pop out effect */
+
+
+
 
 .left_container ul {
   list-style: none;
@@ -123,12 +131,12 @@ body {
   fill: currentColor;
 }
 
-.platform_icon_container .icon path {
-  color: var(--main-text-color);
+.platforms_icon_container .icon path {
+  color: var(--sec-text-color);
 }
 
-.platform_icon_container .icon:hover path {
-  color: var(--main-accent-color);
+.platforms_icon_container .icon:hover path {
+  color: var(--main-text-color);
 }
 
 /* About Section */
