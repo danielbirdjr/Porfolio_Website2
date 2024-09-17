@@ -148,7 +148,7 @@ body {
   font-size: 1rem;
   color: var(--sec-text-color);
   line-height: 1.675;
-  padding-left: 1rem;
+  padding-left: 1rem; /* check this */
 }
 
 .about_container p b {
@@ -393,6 +393,10 @@ body {
 
   .experice_container:hover, .project_container:hover {
     background-color: transparent !important; 
+  }
+
+  .about_container p {
+    padding-left: 0rem; /* check this */
   }
 }
 
