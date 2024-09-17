@@ -19,7 +19,7 @@ function App() {
               <a href="#projects"><span></span>⎯⎯⎯ Projects</a>
             </div>
           </div>
-          <div>
+          <div className='platform_icon_container'>
             <ul>
               <li>
                 <a href="https://github.com/danielbirdjr" target='_blank' rel="noopener noreferrer">
@@ -37,7 +37,7 @@ function App() {
               </li>
               <li>
                 <a href="mailto:danielbirdwork@gmail.com" target='_blank' rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" id="mail" class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" id="mail" className="icon">
                     <path fill="currentColor" d="M0,94V26A25.94821,25.94821,0,0,1,26,0H94a25.94821,25.94821,0,0,1,26,26V94a25.94821,25.94821,0,0,1-26,26H26A26.012,26.012,0,0,1,0,94Z"></path>
                     <path fill="#121212" d="M99,86.2a6.10894,6.10894,0,0,1-3,.8H24a5.83049,5.83049,0,0,1-3-.8l24-24,5.9,5.9A12.219,12.219,0,0,0,60,71.5a12.37426,12.37426,0,0,0,9.1-3.4L75,62.2Zm2.1-2.2-24-24,24-24a6.10893,6.10893,0,0,1,.8,3V81A4.55088,4.55088,0,0,1,101.1,84ZM18.8,84a6.10894,6.10894,0,0,1-.8-3V39a5.83049,5.83049,0,0,1,.8-3l24,24ZM99,33.8,66.9,65.9A9.353,9.353,0,0,1,60,68.5a9.353,9.353,0,0,1-6.9-2.6L21,33.8a6.10894,6.10894,0,0,1,3-.8H96A6.10862,6.10862,0,0,1,99,33.8Z"></path>
                   </svg>

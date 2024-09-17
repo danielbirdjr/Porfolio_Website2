@@ -113,13 +113,8 @@ body {
 }
 
 .left_container ul li a {
-  color: var(--sec-text-color); /* Default icon color */
   display: flex;
   align-items: center;
-}
-
-.left_container ul li a:hover {
-  color: var(--main-text-color);
 }
 
 .icon {
@@ -128,8 +123,12 @@ body {
   fill: currentColor;
 }
 
-.icon:hover {
+.platform_icon_container .icon path {
   color: var(--main-text-color);
+}
+
+.platform_icon_container .icon:hover path {
+  color: var(--main-accent-color);
 }
 
 /* About Section */
