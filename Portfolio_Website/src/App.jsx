@@ -89,7 +89,7 @@ function App() {
               </div>
             </div>
             <div className='experice_container'>
-              <div className='timeline'>ARIL — MAY 2024</div>
+              <div className='timeline'>APRIL — MAY 2024</div>
               <div className='experience_details'>
                 <h3>Artificial Intelligience & Software Engineer Intern @ BCAMP</h3>
                 <p>Developed a Next.js frontend application with TypeScript for interactive attorney productivity and client data analysis dashboards.</p>
