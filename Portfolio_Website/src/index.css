@@ -396,7 +396,35 @@ body {
   }
 
   .about_container p {
-    padding-left: 0rem; /* check this */
+    padding-left: 0rem; 
+  }
+
+  .experice_container {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .experice_container:hover h3 {
+    color: inherit;
+  }
+
+  .experice_container h3:hover {
+    color: var(--main-accent-color);
+  }
+
+  .project_container {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .project_container:hover h3, 
+  .project_container:hover path {
+    color: inherit;
+  }
+
+  .project_container h3:hover, 
+  .project_container h3:hover path {
+    color: var(--main-accent-color);
   }
 }
 
