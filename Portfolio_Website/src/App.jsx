@@ -58,27 +58,24 @@ function App() {
             <div className='experice_container'>
               <div className='timeline'>JULY — AUG 2024</div>
               <div className='experience_details'>
-                <h3>Artificial Intelligence & Software Engineer @ Headstarter</h3>
-                <p>Worked on a team of four tasked with developing an Artificial Intelligence project to achieve: getting 1000 people on our waitlist, creating 1000 accounts, or generating $1000 in revenue.</p>
-                <p>Responsible for fullstack development, integrating AI/ML components to enhance functionality and user experience.</p> 
-                <p>Specific contributions and project details to be determined as the project progresses.</p>
+                <h3>Software Engineer & Artificial Intelligence Intern @ Headstarter</h3>
+                <p>Built an accountability web app using React for users to track goals and compete with friends, increasing productivity</p>
+                <p>Developed secure user authentication with Node.js, ensuring safe access to goal-tracking features to protect user data</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>React</div></li>
-                  <li><div className='languages_used_container'>HTML</div></li>
-                  <li><div className='languages_used_container'>CSS</div></li>
+                  <li><div className='languages_used_container'>Next.js</div></li>
+                  <li><div className='languages_used_container'>Tailwind</div></li>
                   <li><div className='languages_used_container'>JavaScript</div></li>
                   <li><div className='languages_used_container'>Python</div></li>
-                  <li><div className='languages_used_container'>SQL</div></li>
                 </ul>
               </div>
             </div>
             <div className='experice_container'>
               <div className='timeline'>JUNE — AUG 2024</div>
               <div className='experience_details'>
-                <h3>Software Engineer Mentor @ BCAMP</h3>
-                <p>Conceptualized and led development of TicketChain, a decentralized ticketing platform on Mode Network blockchain, addressing industry issues.</p>
-                <p>Mentored a cross-functional team of 4 developers, guiding implementation of React, Node.js/Python, and Solidity tech stack.</p>
-                <p>Oversaw key feature development including decentralized event management, user dashboards, and secure ticket transfer system.</p>
+                <h3>Software Engineer Team Lead @ BCAMP</h3>
+                <p>Led team of 4 engineers to build a decentralized ticket platform using Mode Network to reduce fees and prevent fraud</p>
+                <p>Designed project architecture using a tech stack of React, Node.js, Python, Solidity, to ensure secure and scalable blockchain ticket transactions</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>React</div></li>
                   <li><div className='languages_used_container'>Node.js</div></li>
@@ -91,14 +88,15 @@ function App() {
             <div className='experice_container'>
               <div className='timeline'>APRIL — MAY 2024</div>
               <div className='experience_details'>
-                <h3>Artificial Intelligience & Software Engineer Intern @ BCAMP</h3>
-                <p>Developed a Next.js frontend application with TypeScript for interactive attorney productivity and client data analysis dashboards.</p>
-                <p>Implemented user authentication using Auth0 and SSO with SAML 2.0, ensuring secure access to Domo Dashboards.</p>
-                <p>Optimized attorney workflow by creating an intuitive UI showcasing key metrics on client projects, efficiency, and bandwidth.</p>
+                <h3>Software Engineer & Data Science Intern @ FENIX.AI</h3>
+                <p>Optimized attorney workflow by designing an intuitive UI to display key metrics on client projects and attorney efficiency, increasing productivity for legal professionals</p>
+                <p>Implemented SSO authentication with Auth0, ensuring access to attorney efficiency dashboards, protecting legal data</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>Javascript</div></li>
                   <li><div className='languages_used_container'>Python</div></li>
-                  <li><div className='languages_used_container'>Java</div></li>
+                  <li><div className='languages_used_container'>Next.js</div></li>
+                  <li><div className='languages_used_container'>HTML</div></li>
+                  <li><div className='languages_used_container'>CSS</div></li>
                 </ul>
               </div>
             </div>
@@ -106,9 +104,8 @@ function App() {
               <div className='timeline'>JAN — FEB 2024</div>
               <div className='experience_details'>
                 <h3>Software Engineer Intern @ BCAMP</h3>
-                <p>Developed a Telegram crypto trading bot in Python, integrating Moon API for cryptocurrency payments.</p>
-                <p>Utilized Azure cloud services and MySQL database for effective management of user data and active crypto alerts.</p>
-                <p>Enhanced bot functionality by integrating Dune API to fetch real-time on-chain data for active notifications.</p>
+                <p>Developed a Telegram bot using Python, delivering crypto alerts every 10 minutes, improving user decision-making</p>
+                <p>Implemented MySQL to store and retrieve user data for crypto alerts, ensuring secure storage and efficient access</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>Python</div></li>
                   <li><div className='languages_used_container'>SQL</div></li>
