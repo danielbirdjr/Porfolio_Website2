@@ -1,6 +1,7 @@
 import './App.css'
 import ProgressAIImage from './assets/ProgressAI3.png';
 import ComingSoonImage from './assets/coming_soon.jpg';
+import CapstoneProject from './assets/CapstoneProject.jpg'
 
 
 function App() {
@@ -156,7 +157,7 @@ function App() {
             <a href="https://colab.research.google.com/drive/1l6k-Ft2QRBPT-By70hZsjrFa6oV9wggb?usp=sharing" target='_blank'>
               <div className='project_container'>
                 <div className='project_image_container'>
-                  <img src={ProgressAIImage} alt="Machine Learning City Recommendation Daniel Bird" />
+                  <img src={CapstoneProject} alt="Machine Learning City Recommendation Daniel Bird" />
                 </div>
                 <div className='project_info_container'>
                   <h3>
