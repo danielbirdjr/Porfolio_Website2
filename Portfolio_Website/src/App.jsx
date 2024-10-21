@@ -59,8 +59,8 @@ function App() {
               <div className='timeline'>JULY — AUG 2024</div>
               <div className='experience_details'>
                 <h3>Software Engineer & Artificial Intelligence Intern @ Headstarter</h3>
-                <p>Built an accountability web app using React for users to track goals and compete with friends, increasing productivity</p>
-                <p>Developed secure user authentication with Node.js, ensuring safe access to goal-tracking features to protect user data</p>
+                <p>Built an accountability web app using React for users to track goals and compete with friends, increasing productivity.</p>
+                <p>Developed secure user authentication with Node.js, ensuring safe access to goal-tracking features to protect user data.</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>React</div></li>
                   <li><div className='languages_used_container'>Next.js</div></li>
@@ -74,8 +74,8 @@ function App() {
               <div className='timeline'>JUNE — AUG 2024</div>
               <div className='experience_details'>
                 <h3>Software Engineer Team Lead @ BCAMP</h3>
-                <p>Led team of 4 engineers to build a decentralized ticket platform using Mode Network to reduce fees and prevent fraud</p>
-                <p>Designed project architecture using a tech stack of React, Node.js, Python, Solidity, to ensure secure and scalable blockchain ticket transactions</p>
+                <p>Led team of 4 engineers to build a decentralized ticket platform using Mode Network to reduce fees and prevent fraud.</p>
+                <p>Designed project architecture using a tech stack of React, Node.js, Python, Solidity, to ensure secure and scalable blockchain ticket transactions.</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>React</div></li>
                   <li><div className='languages_used_container'>Node.js</div></li>
@@ -89,8 +89,8 @@ function App() {
               <div className='timeline'>APRIL — MAY 2024</div>
               <div className='experience_details'>
                 <h3>Software Engineer & Data Science Intern @ FENIX.AI</h3>
-                <p>Optimized attorney workflow by designing an intuitive UI to display key metrics on client projects and attorney efficiency, increasing productivity for legal professionals</p>
-                <p>Implemented SSO authentication with Auth0, ensuring access to attorney efficiency dashboards, protecting legal data</p>
+                <p>Optimized attorney workflow by designing an intuitive UI to display key metrics on client projects and attorney efficiency, increasing productivity for legal professionals.</p>
+                <p>Implemented SSO authentication with Auth0, ensuring access to attorney efficiency dashboards, protecting legal data.</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>Javascript</div></li>
                   <li><div className='languages_used_container'>Python</div></li>
@@ -104,8 +104,8 @@ function App() {
               <div className='timeline'>JAN — FEB 2024</div>
               <div className='experience_details'>
                 <h3>Software Engineer Intern @ BCAMP</h3>
-                <p>Developed a Telegram bot using Python, delivering crypto alerts every 10 minutes, improving user decision-making</p>
-                <p>Implemented MySQL to store and retrieve user data for crypto alerts, ensuring secure storage and efficient access</p>
+                <p>Developed a Telegram bot using Python, delivering crypto alerts every 10 minutes, improving user decision-making.</p>
+                <p>Implemented MySQL to store and retrieve user data for crypto alerts, ensuring secure storage and efficient access.</p>
                 <ul className='languages_used'>
                   <li><div className='languages_used_container'>Python</div></li>
                   <li><div className='languages_used_container'>SQL</div></li>
@@ -139,7 +139,7 @@ function App() {
                       <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
                     </svg>
                   </h3>
-                  <p>Built an interactive platform using React.js, Firebase, Firestore, Next.js, and JavaScript for users to design, customize, and save workout programs and log workout data (weight, reps, sets) to track progress toward fitness goals</p>
+                  <p>Built an interactive platform using React.js, Firebase, Firestore, Next.js, and JavaScript for users to design, customize, and save workout programs and log workout data (weight, reps, sets) to track progress toward fitness goals.</p>
                   <ul className='languages_used'>
                     <li><div className='languages_used_container'>React</div></li>
                     <li><div className='languages_used_container'>Next.js</div></li>
@@ -149,6 +149,30 @@ function App() {
                     <li><div className='languages_used_container'>Firebase</div></li>
                     <li><div className='languages_used_container'>AI</div></li>
                     <li><div className='languages_used_container'>ML</div></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="https://colab.research.google.com/drive/1l6k-Ft2QRBPT-By70hZsjrFa6oV9wggb?usp=sharing" target='_blank'>
+              <div className='project_container'>
+                <div className='project_image_container'>
+                  <img src={ProgressAIImage} alt="Machine Learning City Recommendation Daniel Bird" />
+                </div>
+                <div className='project_info_container'>
+                  <h3>
+                    Machine Learning City Recommendation
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="arrow" className="arrow_icon">
+                      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
+                    </svg>
+                  </h3>
+                  <p>Built an interactive machine learning project using Python and Logistic Regression that recommends cities to users based on their preferred search criteria.</p>
+                  <p><a className='machine_learning_project_pdf' href="https://drive.google.com/file/d/1Pr0a3tdZgCOCEJ13Q_DOK3t_TeUNzRcX/view?usp=sharing" target='blank'>Project instructions and documentation</a></p>
+                  <ul className='languages_used'>
+                    <li><div className='languages_used_container'>Python</div></li>
+                    <li><div className='languages_used_container'>Google Colab</div></li>
+                    <li><div className='languages_used_container'>Jupyter Notebook</div></li>
+                    <li><div className='languages_used_container'>Machine Learning</div></li>
+                    <li><div className='languages_used_container'>Datasets</div></li>
                   </ul>
                 </div>
               </div>
