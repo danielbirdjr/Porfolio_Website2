@@ -2,6 +2,7 @@ import './App.css'
 import ProgressAIImage from './assets/ProgressAI3.png';
 import ComingSoonImage from './assets/coming_soon.jpg';
 import CapstoneProject from './assets/CapstoneProject.jpg'
+import BarbellProject from './assets/BarbellCalculator.png'
 
 
 function App() {
@@ -128,6 +129,7 @@ function App() {
           </div>
           <div id='projects' className='project_section section'>
             <h2 className='section_header'>Projects</h2>
+
             <a href="https://progressai.vercel.app/" target='_blank'>
               <div className='project_container'>
                 <div className='project_image_container'>
@@ -174,6 +176,29 @@ function App() {
                     <li><div className='languages_used_container'>Jupyter Notebook</div></li>
                     <li><div className='languages_used_container'>Machine Learning</div></li>
                     <li><div className='languages_used_container'>Datasets</div></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="https://barbell-calculator-two.vercel.app/" target='_blank'>
+              <div className='project_container'>
+                <div className='project_image_container'>
+                  <img src={BarbellProject} alt="Barbell Calculator Web Application Daniel Bird" />
+                </div>
+                <div className='project_info_container'>
+                  <h3>
+                    Barbell Calculator
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="arrow" className="arrow_icon">
+                      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className='arrow_icon'><path d="M1 13 13 1M4 1h9v9"></path></g>
+                    </svg>
+                  </h3>
+                  <p>Developed a web app that visually calculates and displays plates for a desired weight, removing the guesswork between sets.</p>
+                  <ul className='languages_used'>
+                    <li><div className='languages_used_container'>JavaScript</div></li>
+                    <li><div className='languages_used_container'>Next.js</div></li>
+                    <li><div className='languages_used_container'>React</div></li>
+                    <li><div className='languages_used_container'>HTML</div></li>
+                    <li><div className='languages_used_container'>CSS</div></li>
                   </ul>
                 </div>
               </div>
