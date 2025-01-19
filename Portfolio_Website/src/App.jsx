@@ -20,7 +20,7 @@ function App() {
   
       setTimeout(() => {
         mailIconCopy.classList.remove('clicked');
-      }, 2000); // Hide the message after 2 seconds
+      }, 1000); // Hide the message after 2 seconds
     }).catch(err => {
       console.error('Failed to copy text to clipboard:', err);
     });
