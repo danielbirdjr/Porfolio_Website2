@@ -13,36 +13,19 @@ function App() {
     setIsLightMode(!isLightMode);
   };
 
-  // function copyToClipboard(email) {
-  //   navigator.clipboard.writeText(email).then(() => {
-  //     const mailIconCopy = document.querySelector('.mail-icon-copy');
-  //     mailIconCopy.classList.add('clicked');
-  
-  //     setTimeout(() => {
-  //       mailIconCopy.classList.remove('clicked');
-  //     }, 2000); // Hide the message after 2 seconds
-  //   }).catch(err => {
-  //     console.error('Failed to copy text to clipboard:', err);
-  //   });
-  // }
-
   function copyToClipboard(email) {
-    const mailIconCopy = document.querySelector('.mail-icon-copy');
-    
-    // Copy email to clipboard
     navigator.clipboard.writeText(email).then(() => {
-      mailIconCopy.classList.add('clicked'); // Show "copied" state
+      const mailIconCopy = document.querySelector('.mail-icon-copy');
+      mailIconCopy.classList.add('clicked');
   
-      // Revert to mail icon after 2 seconds
       setTimeout(() => {
         mailIconCopy.classList.remove('clicked');
-      }, 1000); // Adjust duration as needed
+      }, 2000); // Hide the message after 2 seconds
     }).catch(err => {
       console.error('Failed to copy text to clipboard:', err);
     });
   }
   
-
   return (
     <>
       <div className={`entire_container ${isLightMode ? 'light-mode' : ''}`}>
@@ -97,9 +80,9 @@ function App() {
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='icon mail-icon'>
                     <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='icon copy-icon'>
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='icon copy-icon'>
                     <path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"/>
-                  </svg>
+                  </svg> */}
                 </div>
                 <span className='copy-message'>Copied to clipboard!</span>
               </li>

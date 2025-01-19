@@ -556,23 +556,6 @@ html {
   transition: opacity 0.4s ease;
 }
 
-.mail-icon-copy .mail-icon {
-  opacity: 1;
-}
-
-.mail-icon-copy .copy-icon {
-  opacity: 0;
-  position: absolute;
-}
-
-.mail-icon-copy:hover .mail-icon {
-  opacity: 0;
-}
-
-.mail-icon-copy:hover .copy-icon {
-  opacity: 1;
-}
-
 .mail-icon-copy .copy-message {
   display: none;
   position: absolute;
@@ -589,14 +572,6 @@ html {
 
 .mail-icon-copy.clicked .copy-message {
   display: block;
-}
-
-.mail-icon-copy.clicked .mail-icon {
-  opacity: 0;
-}
-
-.mail-icon-copy.clicked .copy-icon {
-  opacity: 1;
 }
 
 
