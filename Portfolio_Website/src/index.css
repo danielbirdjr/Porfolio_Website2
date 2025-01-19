@@ -590,3 +590,14 @@ html {
 .mail-icon-copy.clicked .copy-message {
   display: block;
 }
+
+.mail-icon-copy.clicked .mail-icon {
+  opacity: 0;
+}
+
+.mail-icon-copy.clicked .copy-icon {
+  opacity: 1;
+}
+
+
+

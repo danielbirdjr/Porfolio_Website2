@@ -13,14 +13,30 @@ function App() {
     setIsLightMode(!isLightMode);
   };
 
-  function copyToClipboard(email) {
-    navigator.clipboard.writeText(email).then(() => {
-      const mailIconCopy = document.querySelector('.mail-icon-copy');
-      mailIconCopy.classList.add('clicked');
+  // function copyToClipboard(email) {
+  //   navigator.clipboard.writeText(email).then(() => {
+  //     const mailIconCopy = document.querySelector('.mail-icon-copy');
+  //     mailIconCopy.classList.add('clicked');
   
+  //     setTimeout(() => {
+  //       mailIconCopy.classList.remove('clicked');
+  //     }, 2000); // Hide the message after 2 seconds
+  //   }).catch(err => {
+  //     console.error('Failed to copy text to clipboard:', err);
+  //   });
+  // }
+
+  function copyToClipboard(email) {
+    const mailIconCopy = document.querySelector('.mail-icon-copy');
+    
+    // Copy email to clipboard
+    navigator.clipboard.writeText(email).then(() => {
+      mailIconCopy.classList.add('clicked'); // Show "copied" state
+  
+      // Revert to mail icon after 2 seconds
       setTimeout(() => {
         mailIconCopy.classList.remove('clicked');
-      }, 2000); // Hide the message after 2 seconds
+      }, 1000); // Adjust duration as needed
     }).catch(err => {
       console.error('Failed to copy text to clipboard:', err);
     });
