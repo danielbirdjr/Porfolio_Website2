@@ -4,15 +4,15 @@ import ComingSoonImage from './assets/coming_soon.jpg';
 import CapstoneProject from './assets/CapstoneProject.jpg'
 import BarbellProject from './assets/BarbellCalculator.png'
 import RMCalculatorProject from './assets/RMCalculatorProject.png'
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
 function App() {
 
-  const [isLightMode, setIsLightMode] = useState(false);
+  // const [isLightMode, setIsLightMode] = useState(false);
   
-  const toggleTheme = () => {
-    setIsLightMode(!isLightMode);
-  };
+  // const toggleTheme = () => {
+  //   setIsLightMode(!isLightMode);
+  // };
 
   function copyToClipboard(email) {
     navigator.clipboard.writeText(email).then(() => {
@@ -29,7 +29,8 @@ function App() {
   
   return (
     <>
-      <div className={`entire_container ${isLightMode ? 'light-mode' : ''}`}>
+      {/* <div className={`entire_container ${isLightMode ? 'light-mode' : ''}`}> */}
+      <div className='entire_container'>
         <div className='left_container'>
           <div className='left_container_text'>
             <h1><a href="/">Daniel Bird</a></h1>
@@ -66,11 +67,11 @@ function App() {
                 </div>
                 <span className='copy-message'>Copied to clipboard!</span>
               </li>
-              <li>
+              {/* <li>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className='icon' onClick={toggleTheme}>
                   <path d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
                 </svg>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
