@@ -16,9 +16,9 @@ export function Contact() {
   return (
     <section id="contact" className="border-t border-border py-28 sm:py-40 lg:py-48">
       <div className="container">
-        <Reveal className="relative overflow-hidden rounded-lg border border-border bg-card px-8 py-20 text-center sm:px-12 sm:py-24">
+        <Reveal className="relative overflow-hidden rounded-lg border border-border bg-card px-8 py-12 text-center sm:px-12 sm:py-16">
           <div className="relative mx-auto flex max-w-3xl flex-col items-center">
-            <figure className="mb-8 size-28 overflow-hidden rounded-full border border-border sm:size-32">
+            <figure className="mb-6 size-24 overflow-hidden rounded-full border border-border sm:size-28">
               <Image
                 src="/images/daniel-headshot.webp"
                 alt="Daniel Bird"
@@ -42,7 +42,7 @@ export function Contact() {
               question, or just want to talk... my inbox is open.
             </p>
 
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
               <Button asChild size="lg">
                 <Link href={`mailto:${siteConfig.email}`}>
                   <Mail />
@@ -61,7 +61,7 @@ export function Contact() {
               </Button>
             </div>
 
-            <div className="mt-10 flex items-center gap-2">
+            <div className="mt-8 flex items-center gap-2">
               {socialItems.map(({ label, href, Icon }) => (
                 <Link
                   key={label}

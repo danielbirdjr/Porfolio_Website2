@@ -25,10 +25,13 @@ export const socials = {
   twitter: "https://x.com/danielbirdjr",
 };
 
+// Order matches the on-page section order (About → Work → Notes → Contact).
+// Notes points at the on-page #notes preview; the full notes index is reached
+// via the "All notes" link inside that section.
 export const navLinks = [
-  { label: "Work", href: "/#work" },
-  { label: "Notes", href: "/notes" },
   { label: "About", href: "/#about" },
+  { label: "Work", href: "/#work" },
+  { label: "Notes", href: "/#notes" },
   { label: "Contact", href: "/#contact" },
 ];
 

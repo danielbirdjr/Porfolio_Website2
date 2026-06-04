@@ -33,7 +33,7 @@ export function NotesPreview() {
           </Link>
         </Reveal>
 
-        <RevealGroup className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {notes.map((note) => (
             <RevealItem key={note.meta.slug} className="h-full">
               <NoteCard note={note} />

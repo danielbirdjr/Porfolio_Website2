@@ -14,7 +14,7 @@ export function Projects() {
           </SectionHeading>
         </Reveal>
 
-        <RevealGroup className="mt-16 grid gap-8 md:grid-cols-2">
+        <RevealGroup className="mt-10 grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <RevealItem key={project.title} className="h-full min-w-0">
               <ProjectCard project={project} />
