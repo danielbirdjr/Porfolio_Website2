@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm "engineer's notebook" theme — espresso paper + metallic gold. */
+    --background: 30 16% 5%;
+    --foreground: 36 33% 90%;
+
+    --card: 30 14% 7%;
+    --card-foreground: 36 33% 90%;
+
+    --muted: 32 10% 13%;
+    --muted-foreground: 36 11% 60%;
+
+    --secondary: 32 10% 12%;
+    --secondary-foreground: 36 33% 90%;
+
+    /* Muted, metallic antique gold — the single accent. */
+    --primary: 41 54% 57%;
+    --primary-foreground: 30 20% 7%;
+
+    /* Subtle warm surface for hover/active states. */
+    --accent: 32 12% 15%;
+    --accent-foreground: 36 33% 90%;
+
+    --border: 34 14% 16%;
+    --input: 34 14% 16%;
+    --ring: 41 54% 57%;
+
+    --radius: 0.5rem;
+
+    /* Graph-paper grid metrics. */
+    --grid-cell: 26px;
+    --grid-major: 130px; /* every 5th line */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply text-foreground font-sans antialiased;
+    background-color: hsl(var(--background));
+    /* Graph paper: faint fine grid + slightly stronger gold major lines. */
+    background-image:
+      linear-gradient(hsl(var(--foreground) / 0.022) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--foreground) / 0.022) 1px, transparent 1px),
+      linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size:
+      var(--grid-cell) var(--grid-cell),
+      var(--grid-cell) var(--grid-cell),
+      var(--grid-major) var(--grid-major),
+      var(--grid-major) var(--grid-major);
+    background-position: center top;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.28);
+    color: hsl(var(--foreground));
+  }
+
+  /* Card-level headings default to the editorial serif. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+
+  section[id],
+  div[id] {
+    scroll-margin-top: 6rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(32 10% 20%);
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(41 30% 32%);
+  }
+}
+
+@layer components {
+  /* Big condensed editorial display headline (Bryan-Low style). */
+  .display-heading {
+    @apply font-display uppercase leading-[0.92] tracking-[0.01em];
+  }
+
+  /* Small letterspaced gold eyebrow label. */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-primary;
+  }
+
+  /* Sparingly-used handwritten annotation. */
+  .annotation {
+    @apply font-hand text-primary/90;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Warm gold radial glow used behind the hero / contact card. */
+  .hero-glow {
+    background:
+      radial-gradient(
+        60% 50% at 50% 0%,
+        hsl(41 60% 50% / 0.12) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        40% 45% at 82% 18%,
+        hsl(41 60% 50% / 0.08) 0%,
+        transparent 60%
+      );
+  }
+
+  /* Stronger, self-contained graph-paper block (for cards/panels). */
+  .graph-panel {
+    background-image:
+      linear-gradient(hsl(var(--foreground) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--foreground) / 0.03) 1px, transparent 1px);
+    background-size: var(--grid-cell) var(--grid-cell);
+  }
+
+  /* Fades a section's top/bottom edge into the paper. */
+  .paper-fade-top {
+    mask-image: linear-gradient(to bottom, transparent, black 12%);
+  }
+
+  .accent-gradient-text {
+    background: linear-gradient(180deg, hsl(38 40% 94%) 0%, hsl(36 16% 70%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Big faded "ghost" text behind hero content. */
+  .ghost-text {
+    @apply font-display uppercase leading-none tracking-tight;
+    color: transparent;
+    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.05);
+  }
+}
+
+/* Long-form note typography (prose) tuned for the warm dark theme. */
+.prose-note {
+  --tw-prose-body: hsl(36 14% 78%);
+  --tw-prose-headings: hsl(36 33% 92%);
+  --tw-prose-lead: hsl(36 14% 76%);
+  --tw-prose-links: hsl(41 56% 62%);
+  --tw-prose-bold: hsl(36 33% 92%);
+  --tw-prose-counters: hsl(36 10% 58%);
+  --tw-prose-bullets: hsl(41 50% 50%);
+  --tw-prose-hr: hsl(34 14% 16%);
+  --tw-prose-quotes: hsl(36 20% 86%);
+  --tw-prose-quote-borders: hsl(41 54% 57%);
+  --tw-prose-captions: hsl(36 10% 58%);
+  --tw-prose-code: hsl(36 33% 90%);
+  --tw-prose-pre-code: hsl(36 16% 84%);
+  --tw-prose-pre-bg: hsl(30 16% 8%);
+  --tw-prose-th-borders: hsl(34 14% 22%);
+  --tw-prose-td-borders: hsl(34 14% 16%);
+}

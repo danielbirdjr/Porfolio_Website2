@@ -1,0 +1,54 @@
+---
+title: "Shipping AI Features That Don't Break in Production"
+date: "2026-05-28"
+category: "Engineering"
+description: "Hard-won notes on taking an LLM-powered feature from a slick demo to something you can actually put in front of users."
+slug: "shipping-ai-features-that-dont-break"
+published: true
+---
+
+A demo that works once is easy. A feature that works for thousands of users, on inputs you didn't anticipate, without lighting your error budget on fire — that's the hard part. Here are the lessons that stuck after shipping a few AI features at work.
+
+## The demo is the easy 20%
+
+The thing that makes AI demos so compelling is the same thing that makes them dangerous: they work *most* of the time. The gap between "works in the demo" and "works in production" is almost entirely the unhappy paths — malformed output, latency spikes, prompt injection, and the model confidently making things up.
+
+> Treat the model like an unreliable network call that occasionally lies. Design accordingly.
+
+## Validate every model output
+
+Never trust the shape of what comes back. If you expect JSON, parse it and validate against a schema. If validation fails, retry once with the error fed back in, then fall back to a safe default.
+
+```ts
+const Result = z.object({
+  category: z.enum(["bug", "feature", "question"]),
+  confidence: z.number().min(0).max(1),
+});
+
+function parseModelOutput(raw: string) {
+  const parsed = Result.safeParse(JSON.parse(raw));
+  if (!parsed.success) {
+    // log, retry, or fall back — never let bad output reach the UI
+    return null;
+  }
+  return parsed.data;
+}
+```
+
+## Set a budget before you write a line
+
+Latency and cost are features. Decide up front:
+
+- **Latency:** What's the slowest acceptable response? Stream tokens so perceived latency drops even when total time is high.
+- **Cost:** What's the per-request ceiling? Cache aggressively — identical prompts should never hit the model twice.
+- **Failure:** What does the user see when the model is down? "Try again" is not a plan.
+
+## Evaluate like you mean it
+
+Vibes-based testing doesn't scale. Build a small eval set of real inputs with expected behaviors, and run it on every prompt change. Even 30 hand-labeled examples will catch regressions that manual testing misses.
+
+## The boring stuff still matters
+
+Rate limiting, timeouts, observability, and graceful degradation aren't optional just because there's a model in the loop. If anything, they matter more — the failure modes are weirder and harder to reproduce.
+
+The teams that win with AI aren't the ones with the cleverest prompts. They're the ones who treated the model as one component in a system that was engineered to be reliable.
