@@ -30,8 +30,7 @@ export function About() {
               className="space-y-5 text-lg leading-relaxed text-muted-foreground"
             >
               <p>
-                I&apos;m a software engineer passionate about building useful
-                things with{" "}
+                I&apos;m a software engineer who builds useful things with{" "}
                 <span className="text-foreground">AI and machine learning</span>
                 . I&apos;m pursuing my master&apos;s at{" "}
                 <span className="text-foreground">Georgia Tech</span> while

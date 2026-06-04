@@ -53,7 +53,6 @@ const config: Config = {
         serif: ["var(--font-fraunces)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-bebas)", "Impact", "sans-serif"],
-        hand: ["var(--font-caveat)", "cursive"],
       },
       maxWidth: {
         prose: "65ch",

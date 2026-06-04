@@ -110,9 +110,12 @@
     @apply inline-flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-primary;
   }
 
-  /* Sparingly-used handwritten annotation. */
-  .annotation {
-    @apply font-hand text-primary/90;
+  /* Keyboard-only skip link — first focusable element on the page. */
+  .skip-link {
+    @apply absolute left-4 top-4 z-[100] -translate-y-24 rounded-md border border-border bg-card px-4 py-2 text-sm font-medium text-foreground opacity-0 transition-transform;
+  }
+  .skip-link:focus-visible {
+    @apply translate-y-0 opacity-100 outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
   }
 }
 
@@ -147,13 +150,6 @@
   /* Fades a section's top/bottom edge into the paper. */
   .paper-fade-top {
     mask-image: linear-gradient(to bottom, transparent, black 12%);
-  }
-
-  .accent-gradient-text {
-    background: linear-gradient(180deg, hsl(38 40% 94%) 0%, hsl(36 16% 70%) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
   }
 
   /* Big faded "ghost" text behind hero content. */

@@ -24,11 +24,11 @@ export function Contact() {
               <span className="h-px w-8 bg-primary/50" />
             </div>
             <h2 className="display-heading mt-6 text-balance text-5xl text-foreground sm:text-6xl md:text-7xl">
-              Let&apos;s build — or{" "}
+              Let&apos;s build or{" "}
               <span className="font-serif italic normal-case tracking-normal text-primary">
                 train
               </span>{" "}
-              — something good.
+              something good.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
               Whether you&apos;ve got an engineering problem, a coaching

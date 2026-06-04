@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { NoteCard } from "@/components/notes/note-card";
 import type { Note } from "@/lib/notes-shared";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,7 @@ export function NotesGrid({
 }) {
   const [active, setActive] = useState<string>("All");
   const filters = ["All", ...categories];
+  const reduceMotion = useReducedMotion();
 
   const filtered = useMemo(
     () =>
@@ -63,10 +64,10 @@ export function NotesGrid({
               <motion.div
                 key={note.meta.slug}
                 layout
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.97 }}
-                transition={{ duration: 0.25 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25, ease: [0, 0, 0.2, 1] }}
               >
                 <NoteCard note={note} />
               </motion.div>

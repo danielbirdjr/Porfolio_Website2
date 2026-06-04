@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Caveat, Fraunces, Inter } from "next/font/google";
+import { Bebas_Neue, Fraunces, Inter } from "next/font/google";
 import { siteConfig } from "@/lib/data";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
@@ -24,13 +24,6 @@ const bebas = Bebas_Neue({
   weight: "400",
   display: "swap",
   variable: "--font-bebas",
-});
-
-// Handwriting face — used sparingly for "notebook" annotations.
-const caveat = Caveat({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-caveat",
 });
 
 export const metadata: Metadata = {
@@ -72,11 +65,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${fraunces.variable} ${inter.variable} ${bebas.variable} ${caveat.variable}`}
+      className={`dark ${fraunces.variable} ${inter.variable} ${bebas.variable}`}
     >
       <body className="min-h-screen bg-background text-foreground">
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         <Nav />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>

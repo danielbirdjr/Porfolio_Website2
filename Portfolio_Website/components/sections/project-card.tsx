@@ -31,8 +31,8 @@ export function ProjectCard({ project }: { project: Project }) {
             className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-card via-muted to-card">
-            <span className="font-serif text-6xl font-medium text-foreground/10">
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-card via-muted to-card px-4">
+            <span className="break-words text-center font-serif text-4xl font-medium text-foreground/10 sm:text-6xl">
               {project.title}
             </span>
           </div>
@@ -60,7 +60,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${project.title} on GitHub`}
-                className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               >
                 <Github className="size-4" />
               </Link>
@@ -71,7 +71,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${project.title} live demo`}
-                className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               >
                 <ArrowUpRight className="size-4" />
               </Link>

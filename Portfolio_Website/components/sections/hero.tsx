@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ArrowDoodle } from "@/components/section-heading";
 
 export function Hero() {
   const reduceMotion = useReducedMotion();
@@ -14,11 +13,11 @@ export function Hero() {
     visible: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
   };
   const item = {
-    hidden: { opacity: 0, y: reduceMotion ? 0 : 20 },
+    hidden: { opacity: 0, y: reduceMotion ? 0 : 8 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] as const },
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] as const },
     },
   };
 
@@ -81,25 +80,14 @@ export function Hero() {
 
           <motion.div
             variants={item}
-            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-24"
+            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
-            <div className="relative">
-              {/* Handwritten note pointing down into the primary CTA */}
-              <div
-                className="pointer-events-none absolute bottom-full left-5 mb-1 hidden -rotate-6 select-none flex-col items-start lg:flex"
-                aria-hidden
-              >
-                <span className="annotation text-2xl">start here</span>
-                <ArrowDoodle className="ml-8 h-9 w-11 text-primary/70" />
-              </div>
-
-              <Button asChild size="lg" className="group w-full sm:w-auto">
-                <Link href="/#work">
-                  See my work
-                  <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
-                </Link>
-              </Button>
-            </div>
+            <Button asChild size="lg" className="group w-full sm:w-auto">
+              <Link href="/#work">
+                See my work
+                <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </Button>
 
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <Link href="/notes">

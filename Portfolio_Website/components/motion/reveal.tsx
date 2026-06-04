@@ -24,11 +24,11 @@ export function Reveal({
   const reduceMotion = useReducedMotion();
 
   const variants: Variants = {
-    hidden: { opacity: 0, y: reduceMotion ? 0 : 16 },
+    hidden: { opacity: 0, y: reduceMotion ? 0 : 8 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98], delay },
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1], delay },
     },
   };
 
@@ -84,11 +84,11 @@ export function RevealItem({
 }) {
   const reduceMotion = useReducedMotion();
   const variants: Variants = {
-    hidden: { opacity: 0, y: reduceMotion ? 0 : 16 },
+    hidden: { opacity: 0, y: reduceMotion ? 0 : 8 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] },
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] },
     },
   };
 
