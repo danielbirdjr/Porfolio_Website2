@@ -10,10 +10,7 @@ export function Projects() {
         <Reveal>
           <SectionHeading index="02" label="Selected work">
             Things I&apos;ve designed, built,{" "}
-            <span className="text-primary">
-              <span className="font-sans not-italic">&amp;</span>{" "}
-              <span className="italic">shipped.</span>
-            </span>
+            <span className="italic text-primary">&amp; shipped.</span>
           </SectionHeading>
         </Reveal>
 

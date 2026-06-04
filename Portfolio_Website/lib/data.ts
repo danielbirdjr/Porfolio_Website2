@@ -21,8 +21,7 @@ export const siteConfig = {
 export const socials = {
   github: "https://github.com/danielbirdjr",
   linkedin: "https://www.linkedin.com/in/danielbirdjr/",
-  // TODO(daniel): update if your X/Twitter handle differs.
-  twitter: "https://x.com/danielbirdjr",
+  twitter: "https://x.com/danielbird0",
 };
 
 // Order matches the on-page section order (About → Work → Notes → Contact).

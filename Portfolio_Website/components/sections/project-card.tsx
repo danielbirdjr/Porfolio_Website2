@@ -20,7 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Open ${project.title}`}
-        className="relative block aspect-[16/10] overflow-hidden border-b border-border bg-muted"
+        className="relative block aspect-[16/9] overflow-hidden border-b border-border bg-muted"
       >
         {project.image ? (
           <Image
@@ -40,7 +40,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </Link>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-8">
+      <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-4">
           <h3 className="font-serif text-2xl font-medium leading-tight">
             <Link
@@ -78,11 +78,11 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
 
-        <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
           {project.description}
         </p>
 
-        <div className="mt-auto flex flex-wrap gap-2 pt-6">
+        <div className="mt-auto flex flex-wrap gap-2 pt-5">
           {project.tech.map((tech) => (
             <Badge key={tech} variant="default">
               {tech}

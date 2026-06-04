@@ -34,13 +34,13 @@ export function About() {
                 <span className="text-foreground">machine learning</span> at{" "}
                 <span className="text-foreground">Georgia Tech</span> while
                 working full-time. I care about the systems and models
-                underneath AI — how they actually work, and how to apply them to
+                underneath AI: how they actually work, and how to apply them to
                 work more efficiently.
               </p>
               <p>
                 Outside of engineering, I do online{" "}
-                <span className="text-foreground">fitness coaching</span> — and
-                I believe in distilling hard-earned knowledge into simple,
+                <span className="text-foreground">fitness coaching</span>, and I
+                believe in distilling hard-earned knowledge into simple,
                 actionable guides. Whether it&apos;s a training program or a
                 technical write-up, the goal is the same: take something I had
                 to learn the hard way and save someone else the time and energy.

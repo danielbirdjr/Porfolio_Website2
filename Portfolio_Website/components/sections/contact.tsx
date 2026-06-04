@@ -37,7 +37,7 @@ export function Contact() {
               Let&apos;s build or{" "}
               <span className="italic text-primary">train</span> something good.
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Whether you&apos;ve got an engineering problem, a coaching
               question, or just want to talk... my inbox is open.
             </p>

@@ -53,7 +53,7 @@ export function Hero() {
             variants={item}
             className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground"
           >
-            I&apos;m Daniel Bird — a software engineer and Georgia Tech M.S.
+            I&apos;m Daniel Bird, a software engineer and Georgia Tech M.S.
             student specializing in Machine Learning. I build production
             software, coach athletes online, and write down what I learn so
             it&apos;s useful to someone else.
