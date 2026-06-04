@@ -65,8 +65,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${fraunces.variable} ${inter.variable} ${caveat.variable}`}
     >
+      <head>
+        {/* Apply the saved theme before paint to avoid a flash of the
+            wrong palette. Defaults to light ("paper") when no choice saved. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-background text-foreground">
         <a href="#main" className="skip-link">
           Skip to content

@@ -39,6 +39,32 @@
     --grid-major: 120px; /* every 5th line */
   }
 
+  /* Dark mode — the earlier warm-espresso + gold register, as a token swap.
+     Grid lines use --foreground, so they become warm cream on espresso. */
+  .dark {
+    --background: 30 16% 5%;
+    --foreground: 36 33% 90%;
+
+    --card: 30 14% 7%;
+    --card-foreground: 36 33% 90%;
+
+    --muted: 32 10% 13%;
+    --muted-foreground: 36 12% 62%;
+
+    --secondary: 32 10% 12%;
+    --secondary-foreground: 36 33% 90%;
+
+    --primary: 41 56% 60%;
+    --primary-foreground: 30 20% 7%;
+
+    --accent: 32 12% 15%;
+    --accent-foreground: 36 33% 90%;
+
+    --border: 34 14% 16%;
+    --input: 34 14% 16%;
+    --ring: 41 56% 60%;
+  }
+
   * {
     @apply border-border;
   }
@@ -99,6 +125,12 @@
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(35 30% 55%);
   }
+  .dark ::-webkit-scrollbar-thumb {
+    background: hsl(32 10% 22%);
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: hsl(41 30% 35%);
+  }
 }
 
 @layer components {
@@ -151,4 +183,24 @@
   --tw-prose-pre-bg: hsl(30 22% 16%);
   --tw-prose-th-borders: hsl(38 20% 70%);
   --tw-prose-td-borders: hsl(38 22% 80%);
+}
+
+/* Long-form note typography — warm cream ink on espresso (dark mode). */
+.dark .prose-note {
+  --tw-prose-body: hsl(36 14% 78%);
+  --tw-prose-headings: hsl(36 33% 92%);
+  --tw-prose-lead: hsl(36 14% 76%);
+  --tw-prose-links: hsl(41 56% 64%);
+  --tw-prose-bold: hsl(36 33% 92%);
+  --tw-prose-counters: hsl(36 10% 58%);
+  --tw-prose-bullets: hsl(41 50% 52%);
+  --tw-prose-hr: hsl(34 14% 18%);
+  --tw-prose-quotes: hsl(36 20% 86%);
+  --tw-prose-quote-borders: hsl(41 56% 58%);
+  --tw-prose-captions: hsl(36 10% 58%);
+  --tw-prose-code: hsl(36 33% 90%);
+  --tw-prose-pre-code: hsl(36 16% 84%);
+  --tw-prose-pre-bg: hsl(30 16% 9%);
+  --tw-prose-th-borders: hsl(34 14% 22%);
+  --tw-prose-td-borders: hsl(34 14% 16%);
 }
