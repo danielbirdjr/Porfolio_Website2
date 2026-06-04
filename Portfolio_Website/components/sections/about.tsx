@@ -43,7 +43,7 @@ export function About() {
                 I believe in distilling hard-earned knowledge into simple,
                 actionable guides. Whether it&apos;s a training program or a
                 technical write-up, the goal is the same: take something I had
-                to learn the hard way and make it easy for the next person.
+                to learn the hard way and save someone else the time and energy.
               </p>
               <Link
                 href={siteConfig.resumeUrl}
@@ -60,11 +60,11 @@ export function About() {
               {stats.map((stat, i) => (
                 <RevealItem
                   key={stat.label}
-                  className={`p-8 ${
+                  className={`p-5 sm:p-8 ${
                     i % 2 === 0 ? "border-r border-border" : ""
                   } ${i < 2 ? "border-b border-border" : ""}`}
                 >
-                  <div className="font-serif text-4xl font-medium leading-none text-primary sm:text-5xl">
+                  <div className="whitespace-nowrap font-serif text-3xl font-medium leading-none text-primary sm:text-5xl">
                     {stat.value}
                   </div>
                   <div className="mt-3 text-sm leading-snug text-muted-foreground">

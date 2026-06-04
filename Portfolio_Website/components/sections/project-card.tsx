@@ -11,7 +11,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors duration-200 hover:border-primary/50",
+        "group relative flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors duration-200 hover:border-primary/50",
       )}
     >
       {/* Media */}
@@ -78,11 +78,11 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
 
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
           {project.description}
         </p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-auto flex flex-wrap gap-2 pt-6">
           {project.tech.map((tech) => (
             <Badge key={tech} variant="default">
               {tech}

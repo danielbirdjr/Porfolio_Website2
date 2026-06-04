@@ -43,7 +43,7 @@ export type Stat = {
 export const stats: Stat[] = [
   { value: "M.S.", label: "Computer Science @ Georgia Tech" },
   { value: "5+ yrs", label: "Writing & shipping code" },
-  { value: "AI / ML", label: "Graduate specialization" },
+  { value: "AI/ML", label: "Graduate specialization" },
   { value: "Coach", label: "Online fitness coaching" },
 ];
 

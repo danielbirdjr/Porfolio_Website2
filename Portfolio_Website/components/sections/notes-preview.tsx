@@ -19,8 +19,8 @@ export function NotesPreview() {
               <span className="italic text-primary">writing down.</span>
             </SectionHeading>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Essays, engineering notes, and coaching guides, distilled so they
-              save someone else the time I spent learning them.
+              Engineering notes, coaching guides, and thoughts — distilled so
+              they save someone else the time I spent learning them.
             </p>
             <p className="annotation text-xl">straight from the notebook</p>
           </div>

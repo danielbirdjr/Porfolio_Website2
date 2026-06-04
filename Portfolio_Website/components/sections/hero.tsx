@@ -44,9 +44,8 @@ export function Hero() {
             variants={item}
             className="display-heading mt-8 text-balance text-[clamp(2.5rem,4vw+1.5rem,4.5rem)] text-foreground"
           >
-            I build software and study the{" "}
-            <span className="italic text-primary">machine learning</span> behind
-            it — and make people{" "}
+            I build software and study{" "}
+            <span className="italic text-primary">AI</span> — and make people{" "}
             <span className="italic text-primary">stronger.</span>
           </motion.h1>
 
@@ -54,9 +53,9 @@ export function Hero() {
             variants={item}
             className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground"
           >
-            I&apos;m Daniel Bird — a software engineer and Georgia Tech
-            master&apos;s student in machine learning. I build production
-            software, coach lifters online, and write down what I learn so
+            I&apos;m Daniel Bird — a software engineer and Georgia Tech M.S.
+            student specializing in Machine Learning. I build production
+            software, coach athletes online, and write down what I learn so
             it&apos;s useful to someone else.
           </motion.p>
 
