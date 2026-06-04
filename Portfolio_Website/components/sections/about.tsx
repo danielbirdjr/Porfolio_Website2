@@ -30,12 +30,12 @@ export function About() {
               className="space-y-5 text-lg leading-relaxed text-muted-foreground"
             >
               <p>
-                I&apos;m a software engineer who builds useful things with{" "}
-                <span className="text-foreground">AI and machine learning</span>
-                . I&apos;m pursuing my master&apos;s at{" "}
+                I&apos;m a software engineer pursuing my master&apos;s in{" "}
+                <span className="text-foreground">machine learning</span> at{" "}
                 <span className="text-foreground">Georgia Tech</span> while
-                working full-time, with a focus on the systems and models that
-                make software genuinely smarter.
+                working full-time. I care about the systems and models
+                underneath AI — how they actually work, and how to apply them to
+                work more efficiently.
               </p>
               <p>
                 Outside of engineering, I do online{" "}

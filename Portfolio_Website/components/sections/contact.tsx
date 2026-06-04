@@ -39,7 +39,7 @@ export function Contact() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
               Whether you&apos;ve got an engineering problem, a coaching
-              question, or just want to talk shop, my inbox is open.
+              question, or just want to talk... my inbox is open.
             </p>
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
@@ -55,7 +55,7 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Résumé
+                  View résumé
                   <ArrowUpRight />
                 </Link>
               </Button>

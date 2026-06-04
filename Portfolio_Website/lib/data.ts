@@ -7,11 +7,11 @@
 export const siteConfig = {
   name: "Daniel Bird",
   monogram: "DB",
-  role: "Software Engineer & Graduate Student",
+  role: "Fullstack Software Engineer & Georgia Tech M.S.",
   // Used for <title>, meta, and Open Graph.
   url: "https://www.danielbird.org",
   description:
-    "Daniel Bird — software engineer building useful things with AI and ML, graduate student at Georgia Tech, and online fitness coach. Notes, guides, and projects.",
+    "Daniel Bird — fullstack software engineer and Georgia Tech master's student in machine learning, and online fitness coach. Notes, guides, and projects.",
   // TODO(daniel): confirm which inbox you want public.
   email: "danielbirdwork@gmail.com",
   resumeUrl:
@@ -39,7 +39,7 @@ export type Stat = {
 
 export const stats: Stat[] = [
   { value: "M.S.", label: "Computer Science @ Georgia Tech" },
-  { value: "1 yr", label: "Full-time Software Engineer" },
+  { value: "5+ yrs", label: "Writing & shipping code" },
   { value: "AI / ML", label: "Graduate specialization" },
   { value: "Coach", label: "Online fitness coaching" },
 ];
@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     title: "ProgressAI",
     description:
-      "An AI-driven fitness tracking app that builds personalized workout programs and continuously optimizes them from user data — training volume, intensity, sleep, nutrition, and stress.",
+      "A fitness app that builds personalized training programs and refines them from logged data — training volume, intensity, sleep, nutrition, and stress.",
     tech: ["React", "JavaScript", "Firebase", "Vite", "SQL"],
     liveUrl: "https://training-app-project.vercel.app/",
     githubUrl: "https://github.com/danielbirdjr",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   {
     title: "TicketChain",
     description:
-      "A decentralized ticketing platform on the Mode Network blockchain — decentralized event management, user dashboards, and a secure ticket-transfer system. Led a cross-functional team of four.",
+      "A blockchain ticketing platform on Mode Network — on-chain event management, user dashboards, and a tamper-resistant ticket-transfer system. Led a cross-functional team of four.",
     tech: ["React", "Node.js", "Solidity", "thirdweb", "Python"],
     // TODO(daniel): add live demo + repo links if available.
     githubUrl: "https://github.com/danielbirdjr",
@@ -85,18 +85,17 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "Languages",
     icon: "code",
-    skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "Solidity"],
+    skills: ["Python", "TypeScript", "JavaScript", "C#", "Java", "SQL", "Solidity"],
   },
   {
     category: "Frameworks & Libraries",
     icon: "boxes",
-    skills: ["React", "Next.js", "Node.js", "Vite", "Tailwind CSS"],
+    skills: ["React", "Next.js", "Angular", ".NET", "Node.js", "Tailwind CSS", "Vite"],
   },
   {
     category: "AI / ML",
     icon: "brain",
-    // TODO(daniel): tune to match the tools you actually use day-to-day.
-    skills: ["PyTorch", "scikit-learn", "OpenAI API", "Pandas", "NumPy"],
+    skills: ["PyTorch", "scikit-learn", "OpenAI API", "Claude API", "Gemini API", "Ollama", "NumPy", "Pandas"],
   },
   {
     category: "Cloud & Tooling",
