@@ -105,9 +105,26 @@
     @apply font-serif;
   }
 
+  /* Anchor offset for in-page nav. Sections carry large top padding
+     (py-28/40/48 = 7/10/12rem); landing a jump at the section box leaves that
+     padding as dead space and the heading sits a third of the way down the
+     viewport. Offsetting per breakpoint lands the eyebrow/heading ~6rem from
+     the top (just below the 4rem fixed nav) without touching scroll spacing. */
   section[id],
   div[id] {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: -1rem;
+  }
+  @media (min-width: 640px) {
+    section[id],
+    div[id] {
+      scroll-margin-top: -4rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    section[id],
+    div[id] {
+      scroll-margin-top: -6rem;
+    }
   }
 
   ::-webkit-scrollbar {

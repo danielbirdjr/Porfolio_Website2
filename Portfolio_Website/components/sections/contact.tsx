@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -17,6 +18,16 @@ export function Contact() {
       <div className="container">
         <Reveal className="relative overflow-hidden rounded-lg border border-border bg-card px-8 py-20 text-center sm:px-12 sm:py-24">
           <div className="relative mx-auto flex max-w-3xl flex-col items-center">
+            <figure className="mb-8 size-28 overflow-hidden rounded-full border border-border sm:size-32">
+              <Image
+                src="/images/daniel-headshot.webp"
+                alt="Daniel Bird"
+                width={320}
+                height={320}
+                sizes="128px"
+                className="h-full w-full object-cover"
+              />
+            </figure>
             <div className="eyebrow">
               <span className="h-px w-8 bg-primary/40" />
               Contact
