@@ -13,22 +13,18 @@ const socialItems = [
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-border py-24 sm:py-32">
+    <section id="contact" className="border-t border-border py-28 sm:py-40 lg:py-48">
       <div className="container">
-        <Reveal className="graph-panel relative overflow-hidden rounded-xl border border-border bg-card px-6 py-16 text-center sm:px-12 sm:py-20">
-          <div className="absolute inset-0 hero-glow opacity-70" aria-hidden />
+        <Reveal className="relative overflow-hidden rounded-lg border border-border bg-card px-8 py-20 text-center sm:px-12 sm:py-24">
           <div className="relative mx-auto flex max-w-3xl flex-col items-center">
             <div className="eyebrow">
-              <span className="h-px w-8 bg-primary/50" />
+              <span className="h-px w-8 bg-primary/40" />
               Contact
-              <span className="h-px w-8 bg-primary/50" />
+              <span className="h-px w-8 bg-primary/40" />
             </div>
-            <h2 className="display-heading mt-6 text-balance text-5xl text-foreground sm:text-6xl md:text-7xl">
+            <h2 className="display-heading mt-6 text-balance text-4xl text-foreground sm:text-5xl md:text-6xl">
               Let&apos;s build or{" "}
-              <span className="font-serif italic normal-case tracking-normal text-primary">
-                train
-              </span>{" "}
-              something good.
+              <span className="italic text-primary">train</span> something good.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
               Whether you&apos;ve got an engineering problem, a coaching

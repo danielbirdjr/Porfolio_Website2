@@ -5,18 +5,16 @@ import { projects } from "@/lib/data";
 
 export function Projects() {
   return (
-    <section id="work" className="border-t border-border py-24 sm:py-32">
+    <section id="work" className="border-t border-border py-28 sm:py-40 lg:py-48">
       <div className="container">
         <Reveal>
           <SectionHeading index="02" label="Selected work">
             Things I&apos;ve designed, built,{" "}
-            <span className="font-serif italic normal-case tracking-normal text-primary">
-              &amp; shipped.
-            </span>
+            <span className="italic text-primary">&amp; shipped.</span>
           </SectionHeading>
         </Reveal>
 
-        <RevealGroup className="mt-14 grid gap-6 md:grid-cols-2">
+        <RevealGroup className="mt-16 grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <RevealItem key={project.title} className="h-full min-w-0">
               <ProjectCard project={project} />

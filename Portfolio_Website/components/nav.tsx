@@ -44,10 +44,10 @@ export function Nav() {
             className="group flex items-center gap-2.5"
             aria-label={`${siteConfig.name} — home`}
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-md border border-border bg-card font-display text-base text-foreground transition-colors group-hover:border-primary/50 group-hover:text-primary">
+            <span className="flex h-8 w-8 items-center justify-center rounded-md border border-border bg-card font-serif text-sm font-semibold text-foreground transition-colors group-hover:border-primary/50 group-hover:text-primary">
               {siteConfig.monogram}
             </span>
-            <span className="font-display text-xl uppercase tracking-[0.18em] text-foreground">
+            <span className="font-serif text-lg font-medium tracking-tight text-foreground">
               {siteConfig.name}
             </span>
           </Link>

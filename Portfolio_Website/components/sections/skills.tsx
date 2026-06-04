@@ -13,18 +13,16 @@ const iconMap: Record<SkillGroup["icon"], LucideIcon> = {
 
 export function Skills() {
   return (
-    <section id="skills" className="border-t border-border py-24 sm:py-32">
+    <section id="skills" className="border-t border-border py-28 sm:py-40 lg:py-48">
       <div className="container">
         <Reveal>
           <SectionHeading index="03" label="Toolkit">
             The stack I{" "}
-            <span className="font-serif italic normal-case tracking-normal text-primary">
-              reach for.
-            </span>
+            <span className="italic text-primary">reach for.</span>
           </SectionHeading>
         </Reveal>
 
-        <RevealGroup className="mt-14 grid overflow-hidden rounded-lg border border-border sm:grid-cols-2">
+        <RevealGroup className="mt-16 grid overflow-hidden rounded-lg border border-border bg-card sm:grid-cols-2">
           {skillGroups.map((group, i) => {
             const Icon = iconMap[group.icon];
             const isLeft = i % 2 === 0;
@@ -33,17 +31,17 @@ export function Skills() {
               <RevealItem
                 key={group.category}
                 className={cn(
-                  "graph-panel bg-card/40 p-8 transition-colors hover:bg-accent/50",
+                  "p-8 sm:p-10",
                   i < skillGroups.length - 1 && "border-b border-border",
                   isLeft && "sm:border-r",
                   isTopRow ? "sm:border-b" : "sm:border-b-0",
                 )}
               >
                 <div className="flex items-center gap-4">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-md border border-border bg-background/60 text-primary">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-md border border-border bg-background text-primary">
                     <Icon className="size-5" />
                   </span>
-                  <h3 className="font-display text-2xl uppercase tracking-wide">
+                  <h3 className="font-serif text-2xl font-medium">
                     {group.category}
                   </h3>
                 </div>

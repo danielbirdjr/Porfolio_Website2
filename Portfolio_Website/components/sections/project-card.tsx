@@ -11,7 +11,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_0_1px_hsl(var(--primary)/0.2),0_24px_48px_-24px_hsl(var(--primary)/0.25)]",
+        "group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors duration-200 hover:border-primary/50",
       )}
     >
       {/* Media */}
@@ -28,20 +28,19 @@ export function ProjectCard({ project }: { project: Project }) {
             alt={`${project.title} screenshot`}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+            className="object-cover object-top"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-card via-muted to-card px-4">
-            <span className="break-words text-center font-serif text-4xl font-medium text-foreground/10 sm:text-6xl">
+          <div className="flex h-full w-full items-center justify-center bg-muted px-4">
+            <span className="break-words text-center font-serif text-4xl font-medium text-foreground/15 sm:text-6xl">
               {project.title}
             </span>
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </Link>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-8">
         <div className="flex items-start justify-between gap-4">
           <h3 className="font-serif text-2xl font-medium leading-tight">
             <Link

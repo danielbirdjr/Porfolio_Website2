@@ -10,7 +10,7 @@ export function Hero() {
 
   const container = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
+    visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
   };
   const item = {
     hidden: { opacity: 0, y: reduceMotion ? 0 : 8 },
@@ -22,29 +22,16 @@ export function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 hero-glow" aria-hidden />
-
-      {/* Ghost background wordmark */}
-      <div
-        className="pointer-events-none absolute inset-0 hidden items-end justify-end overflow-hidden lg:flex"
-        aria-hidden
-      >
-        <span className="ghost-text translate-x-[6%] translate-y-[12%] text-[26rem]">
-          DB
-        </span>
-      </div>
-
-      <div className="container relative flex min-h-[92vh] flex-col justify-center py-32">
+    <section className="relative">
+      <div className="container relative flex min-h-[90vh] flex-col justify-center py-32">
         <motion.div
           variants={container}
           initial="hidden"
           animate="visible"
-          className="max-w-5xl"
+          className="max-w-3xl"
         >
           <motion.div variants={item}>
             <span className="eyebrow flex-wrap">
-              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               Engineer
               <span className="text-primary/40">·</span>
               Graduate Student
@@ -55,23 +42,16 @@ export function Hero() {
 
           <motion.h1
             variants={item}
-            className="display-heading mt-7 text-balance text-[3.25rem] text-foreground sm:text-7xl md:text-8xl lg:text-[7.5rem]"
+            className="display-heading mt-8 text-balance text-[clamp(2.5rem,4vw+1.5rem,4.5rem)] text-foreground"
           >
             Building useful things with{" "}
-            <span className="font-serif italic normal-case tracking-normal text-primary">
-              AI
-            </span>{" "}
-            <span className="block sm:inline">
-              — and making people{" "}
-              <span className="font-serif italic normal-case tracking-normal text-primary">
-                stronger.
-              </span>
-            </span>
+            <span className="italic text-primary">AI</span> — and making people{" "}
+            <span className="italic text-primary">stronger.</span>
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
+            className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground"
           >
             I&apos;m Daniel Bird — a software engineer and Georgia Tech M.S.
             student in AI/ML. I build practical software, coach lifters online,
@@ -80,7 +60,7 @@ export function Hero() {
 
           <motion.div
             variants={item}
-            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+            className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
             <Button asChild size="lg" className="group w-full sm:w-auto">
               <Link href="/#work">
@@ -89,20 +69,27 @@ export function Hero() {
               </Link>
             </Button>
 
-            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto"
+            >
               <Link href="/notes">
                 Read my notes
                 <ArrowUpRight />
               </Link>
             </Button>
           </motion.div>
+
+          <motion.p
+            variants={item}
+            className="annotation mt-8 inline-block -rotate-1 text-xl"
+          >
+            open to interesting problems
+          </motion.p>
         </motion.div>
       </div>
-
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent"
-        aria-hidden
-      />
     </section>
   );
 }

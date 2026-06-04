@@ -14,28 +14,25 @@ export default function NotesPage() {
 
   return (
     <div className="border-t border-border">
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 hero-glow opacity-60" aria-hidden />
-        <div className="container relative pt-32 pb-12 sm:pt-40 sm:pb-16">
+      <section className="relative">
+        <div className="container relative pt-40 pb-16 sm:pt-48 sm:pb-20">
           <div className="eyebrow">
-            <span className="h-px w-8 bg-primary/50" />
+            <span className="h-px w-8 bg-primary/40" />
             Notes &amp; Guides
           </div>
-          <h1 className="display-heading mt-6 max-w-4xl text-balance text-6xl text-foreground sm:text-7xl md:text-8xl">
+          <h1 className="display-heading mt-6 max-w-4xl text-balance text-[clamp(2.5rem,4vw+1.5rem,4.5rem)] text-foreground">
             Distilled knowledge,{" "}
-            <span className="font-serif italic normal-case tracking-normal text-primary">
-              freely shared.
-            </span>
+            <span className="italic text-primary">freely shared.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Engineering write-ups, coaching guides, and the occasional essay. I
-            write these so I only have to explain something well once — then
-            point people here.
+            write these so I only have to explain something well once, then point
+            people here.
           </p>
         </div>
       </section>
 
-      <section className="container pb-28">
+      <section className="container pb-32">
         <NotesGrid notes={notes} categories={categories} />
       </section>
     </div>

@@ -14,9 +14,9 @@ function Accent({ children }: { children: React.ReactNode }) {
 
 export function About() {
   return (
-    <section id="about" className="border-t border-border py-24 sm:py-32">
+    <section id="about" className="border-t border-border py-28 sm:py-40 lg:py-48">
       <div className="container">
-        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-24">
           <Reveal>
             <SectionHeading index="01" label="About" className="lg:sticky lg:top-28">
               Engineer by <Accent>trade</Accent>, student by <Accent>choice</Accent>,
@@ -56,15 +56,15 @@ export function About() {
               </Link>
             </Reveal>
 
-            <RevealGroup className="grid grid-cols-2 overflow-hidden rounded-lg border border-border">
+            <RevealGroup className="grid grid-cols-2 overflow-hidden rounded-lg border border-border bg-card">
               {stats.map((stat, i) => (
                 <RevealItem
                   key={stat.label}
-                  className={`graph-panel bg-card/60 p-6 transition-colors hover:bg-accent ${
+                  className={`p-8 ${
                     i % 2 === 0 ? "border-r border-border" : ""
                   } ${i < 2 ? "border-b border-border" : ""}`}
                 >
-                  <div className="font-display text-4xl leading-none text-primary sm:text-5xl">
+                  <div className="font-serif text-4xl font-medium leading-none text-primary sm:text-5xl">
                     {stat.value}
                   </div>
                   <div className="mt-3 text-sm leading-snug text-muted-foreground">
@@ -73,6 +73,10 @@ export function About() {
                 </RevealItem>
               ))}
             </RevealGroup>
+
+            <p className="annotation -mt-1 text-xl">
+              the short version of a longer story
+            </p>
           </div>
         </div>
       </div>

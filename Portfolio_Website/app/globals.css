@@ -4,36 +4,39 @@
 
 @layer base {
   :root {
-    /* Warm "engineer's notebook" theme — espresso paper + metallic gold. */
-    --background: 30 16% 5%;
-    --foreground: 36 33% 90%;
+    /* Scholar's-notebook theme — warm paper, warm ink, one quiet accent. */
 
-    --card: 30 14% 7%;
-    --card-foreground: 36 33% 90%;
+    /* Surface: warm aged-paper / linen (never white, never gray). */
+    --background: 42 33% 90%;
+    --foreground: 30 26% 14%;
 
-    --muted: 32 10% 13%;
-    --muted-foreground: 36 11% 60%;
+    /* Content containers: a slightly cleaner sheet laid on the paper. */
+    --card: 40 40% 95%;
+    --card-foreground: 30 26% 14%;
 
-    --secondary: 32 10% 12%;
-    --secondary-foreground: 36 33% 90%;
+    --muted: 40 24% 87%;
+    --muted-foreground: 32 18% 32%;
 
-    /* Muted, metallic antique gold — the single accent. */
-    --primary: 41 54% 57%;
-    --primary-foreground: 30 20% 7%;
+    --secondary: 40 24% 88%;
+    --secondary-foreground: 30 26% 14%;
 
-    /* Subtle warm surface for hover/active states. */
-    --accent: 32 12% 15%;
-    --accent-foreground: 36 33% 90%;
+    /* The single quiet accent — burnt-amber ink (links, eyebrows, CTAs). */
+    --primary: 35 50% 33%;
+    --primary-foreground: 42 40% 96%;
 
-    --border: 34 14% 16%;
-    --input: 34 14% 16%;
-    --ring: 41 54% 57%;
+    /* Warm raised surface for soft hover states. */
+    --accent: 40 26% 84%;
+    --accent-foreground: 30 26% 14%;
+
+    --border: 38 22% 78%;
+    --input: 38 22% 78%;
+    --ring: 35 50% 33%;
 
     --radius: 0.5rem;
 
-    /* Graph-paper grid metrics. */
-    --grid-cell: 26px;
-    --grid-major: 130px; /* every 5th line */
+    /* Graph-paper grid metrics (fixed px so it reads consistently). */
+    --grid-cell: 24px;
+    --grid-major: 120px; /* every 5th line */
   }
 
   * {
@@ -48,28 +51,27 @@
   body {
     @apply text-foreground font-sans antialiased;
     background-color: hsl(var(--background));
-    /* Graph paper: faint fine grid + slightly stronger gold major lines. */
+    /* Faint graph paper: warm-ink lines, slightly stronger every 5th line. */
     background-image:
-      linear-gradient(hsl(var(--foreground) / 0.022) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--foreground) / 0.022) 1px, transparent 1px),
-      linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+      linear-gradient(hsl(var(--foreground) / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--foreground) / 0.045) 1px, transparent 1px),
+      linear-gradient(hsl(var(--foreground) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--foreground) / 0.06) 1px, transparent 1px);
     background-size:
       var(--grid-cell) var(--grid-cell),
       var(--grid-cell) var(--grid-cell),
       var(--grid-major) var(--grid-major),
       var(--grid-major) var(--grid-major);
     background-position: center top;
-    font-feature-settings: "cv11", "ss01";
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    background: hsl(var(--primary) / 0.28);
+    background: hsl(var(--primary) / 0.18);
     color: hsl(var(--foreground));
   }
 
-  /* Card-level headings default to the editorial serif. */
+  /* Headings use the serif (Display + Heading roles share Fraunces). */
   h1,
   h2,
   h3,
@@ -83,31 +85,37 @@
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
   ::-webkit-scrollbar-track {
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(32 10% 20%);
+    background: hsl(38 18% 72%);
     border-radius: 9999px;
-    border: 2px solid hsl(var(--background));
+    border: 3px solid hsl(var(--background));
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(41 30% 32%);
+    background: hsl(35 30% 55%);
   }
 }
 
 @layer components {
-  /* Big condensed editorial display headline (Bryan-Low style). */
+  /* Display-role headline — quiet, literary serif. Sentence case. */
   .display-heading {
-    @apply font-display uppercase leading-[0.92] tracking-[0.01em];
+    @apply font-serif font-medium leading-[1.06] tracking-[-0.015em];
   }
 
-  /* Small letterspaced gold eyebrow label. */
+  /* Small letterspaced overline label. */
   .eyebrow {
-    @apply inline-flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.22em] text-primary;
+    @apply inline-flex items-center gap-3 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+  }
+
+  /* The one decorative face — Caveat — as a scholar's marginal annotation.
+     Used in <= 4 places, never for body/headings/nav/CTAs. */
+  .annotation {
+    @apply font-hand text-primary;
   }
 
   /* Keyboard-only skip link — first focusable element on the page. */
@@ -123,59 +131,24 @@
   .text-balance {
     text-wrap: balance;
   }
-
-  /* Warm gold radial glow used behind the hero / contact card. */
-  .hero-glow {
-    background:
-      radial-gradient(
-        60% 50% at 50% 0%,
-        hsl(41 60% 50% / 0.12) 0%,
-        transparent 70%
-      ),
-      radial-gradient(
-        40% 45% at 82% 18%,
-        hsl(41 60% 50% / 0.08) 0%,
-        transparent 60%
-      );
-  }
-
-  /* Stronger, self-contained graph-paper block (for cards/panels). */
-  .graph-panel {
-    background-image:
-      linear-gradient(hsl(var(--foreground) / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--foreground) / 0.03) 1px, transparent 1px);
-    background-size: var(--grid-cell) var(--grid-cell);
-  }
-
-  /* Fades a section's top/bottom edge into the paper. */
-  .paper-fade-top {
-    mask-image: linear-gradient(to bottom, transparent, black 12%);
-  }
-
-  /* Big faded "ghost" text behind hero content. */
-  .ghost-text {
-    @apply font-display uppercase leading-none tracking-tight;
-    color: transparent;
-    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.05);
-  }
 }
 
-/* Long-form note typography (prose) tuned for the warm dark theme. */
+/* Long-form note typography (prose) — warm ink on paper. */
 .prose-note {
-  --tw-prose-body: hsl(36 14% 78%);
-  --tw-prose-headings: hsl(36 33% 92%);
-  --tw-prose-lead: hsl(36 14% 76%);
-  --tw-prose-links: hsl(41 56% 62%);
-  --tw-prose-bold: hsl(36 33% 92%);
-  --tw-prose-counters: hsl(36 10% 58%);
-  --tw-prose-bullets: hsl(41 50% 50%);
-  --tw-prose-hr: hsl(34 14% 16%);
-  --tw-prose-quotes: hsl(36 20% 86%);
-  --tw-prose-quote-borders: hsl(41 54% 57%);
-  --tw-prose-captions: hsl(36 10% 58%);
-  --tw-prose-code: hsl(36 33% 90%);
-  --tw-prose-pre-code: hsl(36 16% 84%);
-  --tw-prose-pre-bg: hsl(30 16% 8%);
-  --tw-prose-th-borders: hsl(34 14% 22%);
-  --tw-prose-td-borders: hsl(34 14% 16%);
+  --tw-prose-body: hsl(32 18% 26%);
+  --tw-prose-headings: hsl(30 26% 14%);
+  --tw-prose-lead: hsl(32 18% 28%);
+  --tw-prose-links: hsl(35 52% 32%);
+  --tw-prose-bold: hsl(30 26% 14%);
+  --tw-prose-counters: hsl(32 16% 40%);
+  --tw-prose-bullets: hsl(35 45% 45%);
+  --tw-prose-hr: hsl(38 22% 78%);
+  --tw-prose-quotes: hsl(30 24% 20%);
+  --tw-prose-quote-borders: hsl(35 50% 40%);
+  --tw-prose-captions: hsl(32 16% 40%);
+  --tw-prose-code: hsl(30 26% 16%);
+  --tw-prose-pre-code: hsl(40 30% 88%);
+  --tw-prose-pre-bg: hsl(30 22% 16%);
+  --tw-prose-th-borders: hsl(38 20% 70%);
+  --tw-prose-td-borders: hsl(38 22% 80%);
 }

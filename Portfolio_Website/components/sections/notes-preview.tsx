@@ -10,20 +10,19 @@ export function NotesPreview() {
   if (notes.length === 0) return null;
 
   return (
-    <section id="notes" className="border-t border-border py-24 sm:py-32">
+    <section id="notes" className="border-t border-border py-28 sm:py-40 lg:py-48">
       <div className="container">
         <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex flex-col gap-5">
             <SectionHeading index="04" label="Notes & Guides">
               Things worth{" "}
-              <span className="font-serif italic normal-case tracking-normal text-primary">
-                writing down.
-              </span>
+              <span className="italic text-primary">writing down.</span>
             </SectionHeading>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Essays, engineering notes, and coaching guides — distilled so they
+              Essays, engineering notes, and coaching guides, distilled so they
               save someone else the time I spent learning them.
             </p>
+            <p className="annotation text-xl">straight from the notebook</p>
           </div>
           <Link
             href="/notes"
@@ -34,7 +33,7 @@ export function NotesPreview() {
           </Link>
         </Reveal>
 
-        <RevealGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {notes.map((note) => (
             <RevealItem key={note.meta.slug} className="h-full">
               <NoteCard note={note} />

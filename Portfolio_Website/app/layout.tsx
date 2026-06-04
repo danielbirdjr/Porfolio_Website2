@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Fraunces, Inter } from "next/font/google";
+import { Caveat, Fraunces, Inter } from "next/font/google";
 import { siteConfig } from "@/lib/data";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
@@ -18,12 +18,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Condensed display face for big editorial headlines.
-const bebas = Bebas_Neue({
+// Handwriting accent — one decorative face, used sparingly as a
+// scholar's marginal annotation. Never for body, headings, nav, or CTAs.
+const caveat = Caveat({
   subsets: ["latin"],
-  weight: "400",
   display: "swap",
-  variable: "--font-bebas",
+  variable: "--font-caveat",
 });
 
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${fraunces.variable} ${inter.variable} ${bebas.variable}`}
+      className={`${fraunces.variable} ${inter.variable} ${caveat.variable}`}
     >
       <body className="min-h-screen bg-background text-foreground">
         <a href="#main" className="skip-link">

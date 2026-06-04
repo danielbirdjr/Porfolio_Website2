@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
-    <section className="relative flex min-h-[80vh] items-center overflow-hidden">
-      <div className="absolute inset-0 hero-glow" aria-hidden />
+    <section className="relative flex min-h-[80vh] items-center">
       <div className="container relative text-center">
         <p className="font-serif text-7xl font-medium text-primary sm:text-8xl">
           404
