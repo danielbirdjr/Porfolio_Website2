@@ -28,7 +28,7 @@ export function NotesPreview() {
             href="/notes"
             className="group inline-flex shrink-0 items-center gap-1.5 text-base font-medium text-primary transition-colors hover:text-primary/80"
           >
-            View all notes
+            <span className="link-underline">View all notes</span>
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </Reveal>

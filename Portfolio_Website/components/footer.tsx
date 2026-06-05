@@ -10,7 +10,7 @@ const socialItems = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border">
+    <footer className="relative z-20 border-t border-border">
       <div className="container flex flex-col items-center justify-between gap-6 py-10 sm:flex-row">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <span className="font-serif text-base font-medium text-foreground">

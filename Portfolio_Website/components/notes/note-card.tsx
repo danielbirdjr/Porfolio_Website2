@@ -8,7 +8,7 @@ export function NoteCard({ note }: { note: Note }) {
 
   return (
     <Link href={`/notes/${slug}`} className="group block h-full">
-      <article className="flex h-full flex-col rounded-lg border border-border bg-card p-8 transition-colors duration-200 hover:border-primary/50">
+      <article className="surface-gloss flex h-full flex-col rounded-lg border border-border bg-card p-8 transition-colors duration-200 hover:border-primary/50">
         <div className="flex items-center justify-between gap-3">
           <Badge variant="accent">{category}</Badge>
           <time
@@ -28,7 +28,7 @@ export function NoteCard({ note }: { note: Note }) {
         </p>
 
         <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors group-hover:text-primary">
-          Read
+          <span className="link-underline">Read</span>
           <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </span>
       </article>

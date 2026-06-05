@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/reveal";
+import { CardSpotlight } from "@/components/card-spotlight";
 import { SectionHeading } from "@/components/section-heading";
 import { stats, siteConfig } from "@/lib/data";
 
@@ -51,19 +52,22 @@ export function About() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-1.5 text-base font-medium text-primary transition-colors hover:text-primary/80"
               >
-                View full résumé
+                <span className="link-underline">View full résumé</span>
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </Reveal>
 
-            <RevealGroup className="grid grid-cols-2 overflow-hidden rounded-lg border border-border bg-card">
+            <RevealGroup className="surface-gloss grid grid-cols-2 overflow-hidden rounded-lg border border-border bg-card">
               {stats.map((stat, i) => (
                 <RevealItem
                   key={stat.label}
-                  className={`p-5 sm:p-8 ${
+                  className={`relative overflow-hidden p-5 sm:p-8 ${
                     i % 2 === 0 ? "border-r border-border" : ""
                   } ${i < 2 ? "border-b border-border" : ""}`}
                 >
+                  {/* Effect 2 — per-cell cursor spotlight. */}
+                  <CardSpotlight />
+
                   <div className="whitespace-nowrap font-serif text-3xl font-medium leading-none text-primary sm:text-5xl">
                     {stat.value}
                   </div>

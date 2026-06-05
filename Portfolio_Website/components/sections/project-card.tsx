@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { CardSpotlight } from "@/components/card-spotlight";
 import type { Project } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -11,9 +12,12 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors duration-200 hover:border-primary/50",
+        "surface-gloss group relative flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors duration-200 hover:border-primary/50",
       )}
     >
+      {/* Effect 2 — spotlight tracking the cursor within this card. */}
+      <CardSpotlight />
+
       {/* Media */}
       <Link
         href={primaryHref}

@@ -37,6 +37,18 @@
     /* Graph-paper grid metrics (fixed px so it reads consistently). */
     --grid-cell: 24px;
     --grid-major: 120px; /* every 5th line */
+
+    /* Interactive glow tints (light "paper"). Kept very faint here — the
+       effects should be barely perceptible in light mode. Tuning dial:
+       lower the alphas (e.g. / 0.02) or zero them to disable per mode. */
+    /* Page cursor glow disabled in light mode — the moving spotlight reads
+       wrong on paper. Light gets its premium feel from glossy surfaces
+       (.surface-gloss) instead. Dark keeps its cursor glow. */
+    --cursor-glow: transparent;
+    /* Card spotlight — a warm golden highlight, like light catching the paper
+       under the cursor. Light paper has little headroom, so this needs real
+       presence to register; kept soft-edged so it reads as a glow, not a blob. */
+    --card-glow: hsl(38 70% 50% / 0.14);
   }
 
   /* Dark mode — the earlier warm-espresso + gold register, as a token swap.
@@ -63,6 +75,47 @@
     --border: 34 14% 16%;
     --input: 34 14% 16%;
     --ring: 41 56% 60%;
+
+    /* Interactive glow tints (dark "espresso + gold"). Warm gold, soft and
+       restrained — a refined pool of light following the cursor, not a torch. */
+    --cursor-glow: hsl(41 56% 60% / 0.06);
+    --card-glow: hsl(41 56% 60% / 0.06);
+  }
+
+  /* Ambient depth, light "paper" — a faint warm vignette: clean toward the
+     centre, settling to a soft warm edge, so the page reads as a lit sheet on
+     a desk rather than a flat fill. Static, CSS-only, below cursor glow (z-10)
+     and content (z-20). Overridden by the dark rule below. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(
+      ellipse 120% 95% at 50% 26%,
+      transparent 46%,
+      hsl(32 26% 40% / 0.055)
+    );
+  }
+
+  /* Effect 3 — static ambient glow (dark mode only, CSS-only, no JS).
+     A warm elliptical wash bleeding in from the top-center of the viewport,
+     like a desk lamp above and behind the screen — gives the dark page a
+     light source instead of a flat background. Sits below the cursor glow
+     (z-10) and all content (z-20); above the body grid. Not animated, so no
+     reduced-motion guard is needed. */
+  .dark body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(
+      ellipse 80% 40% at 50% -5%,
+      hsl(41 56% 60% / 0.06),
+      transparent
+    );
   }
 
   * {
@@ -165,6 +218,69 @@
      Used in <= 4 places, never for body/headings/nav/CTAs. */
   .annotation {
     @apply font-hand text-primary;
+  }
+
+  /* Animated underline for text links. Grows from the left on hover via a
+     transform (scaleX) — composited, ≤250ms, the site's one ease-out curve.
+     Triggers on the element's own hover or a parent .group hover (so it can
+     sit beside an icon and react to the whole link). Wrap just the text in
+     <span class="link-underline"> to keep the rule off adjacent icons. */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: -2px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  .link-underline:hover::after,
+  .group:hover .link-underline::after {
+    transform: scaleX(1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .link-underline::after {
+      transition: none;
+    }
+  }
+
+  /* Glossy surface (light mode) — makes a card read as a coated, light-catching
+     object on the paper rather than a flat matte patch of it. Three cues:
+       1. a crisp bright line on the top edge (light hitting the bevel),
+       2. a faint top-down reflection across the surface (::after, sits above
+          content like a sheen on glass),
+       3. a soft lift shadow so the card floats just off the page.
+     Disabled in dark, which already reads glossy from its own glow/contrast. */
+  .surface-gloss {
+    position: relative;
+    box-shadow:
+      inset 0 1px 0 hsl(45 70% 100% / 0.7),
+      0 1px 2px hsl(32 24% 34% / 0.05),
+      0 16px 36px -20px hsl(30 24% 24% / 0.22);
+  }
+  .surface-gloss::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(
+      to bottom,
+      hsl(46 65% 100% / 0.18),
+      hsl(46 65% 100% / 0) 34%
+    );
+  }
+  .dark .surface-gloss {
+    box-shadow: none;
+  }
+  .dark .surface-gloss::after {
+    content: none;
   }
 
   /* Keyboard-only skip link — first focusable element on the page. */

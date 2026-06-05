@@ -16,7 +16,7 @@ export function Contact() {
   return (
     <section id="contact" className="border-t border-border py-28 sm:py-40 lg:py-48">
       <div className="container">
-        <Reveal className="relative overflow-hidden rounded-lg border border-border bg-card px-8 py-12 text-center sm:px-12 sm:py-16">
+        <Reveal className="surface-gloss relative overflow-hidden rounded-lg border border-border bg-card px-8 py-12 text-center sm:px-12 sm:py-16">
           <div className="relative mx-auto flex max-w-3xl flex-col items-center">
             <figure className="mb-6 size-24 overflow-hidden rounded-full border border-border sm:size-28">
               <Image

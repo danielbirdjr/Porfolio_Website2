@@ -3,6 +3,7 @@ import { Caveat, Fraunces, Inter } from "next/font/google";
 import { siteConfig } from "@/lib/data";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { CursorGlow } from "@/components/cursor-glow";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -81,8 +82,16 @@ export default function RootLayout({
         <a href="#main" className="skip-link">
           Skip to content
         </a>
+        {/* Effect 1 — page-level cursor glow. Lives outside <main> so it
+            covers the full viewport; z-10 keeps it below content + nav and
+            above the body grid / ambient glow. */}
+        <CursorGlow />
         <Nav />
-        <main id="main">{children}</main>
+        {/* relative z-20 stacks content above the fixed cursor glow so card
+            and section text is never tinted by it. */}
+        <main id="main" className="relative z-20">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

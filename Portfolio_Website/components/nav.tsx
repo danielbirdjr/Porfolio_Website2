@@ -59,9 +59,9 @@ export function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-md px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                  className="group rounded-md px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  {link.label}
+                  <span className="link-underline">{link.label}</span>
                 </Link>
               ))}
             </div>
